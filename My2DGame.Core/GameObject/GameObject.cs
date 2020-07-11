@@ -1,15 +1,15 @@
-﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using My2DGame.Core.Component.GameObject;
 using My2DGame.Core.Scene;
+using My2DGame.Core.UI;
 using My2DGame.Core.Utility;
 
 namespace My2DGame.Core.GameObject {
-	public class GameObject : IGameObject {
-		private bool _enabled;
-		private bool _visible;
+	public class GameObject : BaseSprite, IGameObject {
+		private bool _enabled = true;
+		private bool _visible = true;
 		public event PropertyChangedEventHandler PropertyChanged;
 		public IScene Scene { get; internal set; }
 		public GameObjectComponentCollection Components { get; } = new GameObjectComponentCollection();
@@ -31,18 +31,21 @@ namespace My2DGame.Core.GameObject {
 				OnPropertyChanged();
 			}
 		}
-		public virtual void Initialize() { }
+		public virtual void Initialize() {
+			Components.ForEach(component => component.Initialize());
+		}
 		public virtual void Update(GameTime gameTime) {
 			if (!Enabled) {
 				return;
 			}
-			Components.ForEach(o => o.Update(gameTime));
+			Components.UpdateableEach(gameTime);
 		}
 		public virtual void Draw(GameTime gameTime) {
 			if (!Visible) {
 				return;
 			}
-			Components.ForEach(o => o.Draw(gameTime));
+			Components.DrawableEach(gameTime);
+			Scene.SpriteBatch.Draw(this);
 		}
 		public virtual object Clone() {
 			var newGameObject = Scene.CreateGameObject();

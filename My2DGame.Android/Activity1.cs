@@ -10,7 +10,7 @@ namespace My2DGame.Android {
 		ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden |
 			ConfigChanges.ScreenSize)]
 	public class Activity1 : AndroidGameActivity {
-		private Game _game;
+		private Microsoft.Xna.Framework.Game _game;
 		private View _view;
 
 		protected override void OnCreate(Bundle bundle) {

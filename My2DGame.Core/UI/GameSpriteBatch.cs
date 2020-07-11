@@ -1,11 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using My2DGame.Core.UI;
 
-namespace My2DGame.Desktop.UI {
-	public class DesktopSpriteBatch : ISpriteBatch {
+namespace My2DGame.Core.UI {
+	public class GameSpriteBatch : ISpriteBatch {
 		private readonly SpriteBatch _spriteBatch;
-		public DesktopSpriteBatch(SpriteBatch spriteBatch) {
+		public GameSpriteBatch(SpriteBatch spriteBatch) {
 			_spriteBatch = spriteBatch;
 		}
 		public void StartDraw() {
