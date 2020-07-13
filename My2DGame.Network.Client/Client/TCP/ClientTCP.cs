@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net.Sockets;
 using System.Threading.Tasks;
-using My2DGame.Network.Client.Contract;
 using My2DGame.Network.Client.Utilities;
+using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Client.TCP {
 	public class ClientTcp : INetworkClient {

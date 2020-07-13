@@ -1,6 +1,6 @@
 ﻿using System;
 using My2DGame.Core;
-using My2DGame.Network.Client.Contract;
+using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Tracker {
 	public abstract class BaseTracker<T> : ITracker<T> where T : ISilentPropertyChanged {

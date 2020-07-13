@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using My2DGame.Core;
-using My2DGame.Network.Client.Contract;
 using My2DGame.Network.Client.Synchronizer;
 using My2DGame.Network.Client.Tracker;
+using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Manager {
 	public abstract class TrackedManager<T>: ITrackedManager<T> where T : ISilentPropertyChanged {

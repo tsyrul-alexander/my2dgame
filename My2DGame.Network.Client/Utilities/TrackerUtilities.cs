@@ -1,8 +1,7 @@
-﻿using System;
-using My2DGame.Core;
+﻿using My2DGame.Core;
 using My2DGame.Core.Scene;
-using My2DGame.Network.Client.Contract;
 using My2DGame.Network.Client.Tracker;
+using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Utilities {
 	public static class TrackerUtilities {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace My2DGame.Network.Client.Contract {
+namespace My2DGame.Network.Contract {
 	[Serializable]
 	public class PropertyValue: INetworkObject {
 		public string Name { get; set; }

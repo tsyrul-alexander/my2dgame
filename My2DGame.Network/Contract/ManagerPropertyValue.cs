@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace My2DGame.Network.Client.Contract {
+namespace My2DGame.Network.Contract {
 	[Serializable]
 	public class ManagerPropertyValue: INetworkObject {
 		public Guid Id { get; set; }

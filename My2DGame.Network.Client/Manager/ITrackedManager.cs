@@ -1,6 +1,6 @@
 ﻿using System;
 using My2DGame.Core;
-using My2DGame.Network.Client.Contract;
+using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Manager {
 	public interface ITrackedManager<T> where T : ISilentPropertyChanged {

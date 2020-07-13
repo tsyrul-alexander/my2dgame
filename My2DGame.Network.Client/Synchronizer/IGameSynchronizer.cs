@@ -3,8 +3,8 @@ using My2DGame.Core.GameObject;
 using My2DGame.Core.Property;
 using My2DGame.Core.Scene;
 using My2DGame.Network.Client.Client;
-using My2DGame.Network.Client.Contract;
 using My2DGame.Network.Client.Manager;
+using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Synchronizer {
 	public interface IGameSynchronizer {

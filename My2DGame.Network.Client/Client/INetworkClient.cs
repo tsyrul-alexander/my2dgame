@@ -1,5 +1,5 @@
 ﻿using System;
-using My2DGame.Network.Client.Contract;
+using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Client {
 	public interface INetworkClient {
