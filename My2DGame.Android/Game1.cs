@@ -19,7 +19,7 @@ namespace My2DGame.Android {
 		}
 		protected override void LoadContent() {
 			_spriteBatch = new SpriteBatch(GraphicsDevice);
-			//_game.Initialize(new GameSpriteBatch(_spriteBatch));
+			_game.Initialize(new GameSpriteBatch(_spriteBatch));
 		}
 
 		protected override void Update(GameTime gameTime) {

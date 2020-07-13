@@ -1,5 +1,5 @@
 ﻿using System;
-using My2DGame.Component.Texture;
+using My2DGame.Component.Position;
 using My2DGame.Component.Utilities;
 using My2DGame.Core.Manager;
 using My2DGame.Core.Scene;
@@ -18,6 +18,10 @@ namespace My2DGame.Game.TestGame {
 			var testGO = ActiveScene.CreateGameObject();
 			testGO.Components.Add(testGO.CreateTextureComponent("wood_box"));
 			testGO.Components.Add(testGO.CreatePositionComponent(50, 50));
+			testGO.Components.Add(testGO.CreateScriptComponent((o, time) => {
+				var positionComponent = testGO.Components.Get<PositionComponent>();
+				positionComponent.X.SetValue(positionComponent.X.Value + 0.005 * time.ElapsedGameTime.TotalMilliseconds);;
+			}));
 			ActiveScene.GameObjects.Add(testGO);
 			base.Initialize(spriteBatch);
 		}

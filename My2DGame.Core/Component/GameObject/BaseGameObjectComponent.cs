@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using My2DGame.Core.GameObject;
+using My2DGame.Core.Property;
 
 namespace My2DGame.Core.Component.GameObject {
 	public abstract class BaseGameObjectComponent : IGameObjectComponent {
@@ -38,6 +39,7 @@ namespace My2DGame.Core.Component.GameObject {
 			}
 		}
 		public virtual void Initialize() { }
+		public abstract IProperty[] GetProperties();
 		public virtual void Update(GameTime gameTime) { }
 		public virtual void Draw(GameTime gameTime) { }
 		public object Clone() {

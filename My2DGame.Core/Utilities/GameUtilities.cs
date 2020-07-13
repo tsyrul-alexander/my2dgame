@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using My2DGame.Core.UI;
 
-namespace My2DGame.Core.Utility {
+namespace My2DGame.Core.Utilities {
 	public static class GameUtilities {
 		public static void UpdateableEach(this IEnumerable<IUpdateable> collection, GameTime gameTime) {
 			collection.ForEach(updateable => updateable.Update(gameTime));

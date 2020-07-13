@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using My2DGame.Core.Component.GameObject;
 using My2DGame.Core.Scene;
 using My2DGame.Core.UI;
-using My2DGame.Core.Utility;
+using My2DGame.Core.Utilities;
 
 namespace My2DGame.Core.GameObject {
 	public class GameObject : BaseSprite, IGameObject {

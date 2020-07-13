@@ -5,11 +5,14 @@ namespace My2DGame.Component.Texture {
 	public class TextureComponent : BaseGameObjectComponent {
 		public StringProperty TextureName { get; set; }
 		internal TextureComponent(string textureName) {
-			TextureName = new StringProperty {Value = textureName};
+			TextureName = new StringProperty(textureName);
 		}
 		public override void Initialize() {
 			GameObject.Texture = GameObject.Scene.AssetManager.LoadTexture(TextureName.Value);
 			base.Initialize();
+		}
+		public override IProperty[] GetProperties() {
+			return new IProperty[] { TextureName };
 		}
 	}
 }
