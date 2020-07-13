@@ -5,23 +5,31 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "My2DGame.Desktop", "My2DGame.Desktop\My2DGame.Desktop.csproj", "{26E036E9-4F7E-48AA-A1F6-9584D01813E8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "My2DGame.Core", "My2DGame.Core\My2DGame.Core.csproj", "{0F76840B-05E3-4472-97F6-7FCD9ED6B9E2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "My2DGame.Component", "My2DGame.Component\My2DGame.Component.csproj", "{E6742505-84C5-4348-B766-6DE29390F141}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My2DGame.Android", "My2DGame.Android\My2DGame.Android.csproj", "{410C0262-131C-4D0E-910D-D01B4F7143E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "My2DGame.Network.Server.Console", "My2DGame.Server.Console\My2DGame.Network.Server.Console.csproj", "{0E1287CC-C85E-4C0E-AE7A-D803B24933A2}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Core", "My2DGame.Core\My2DGame.Core.shproj", "{EFBD20C2-1774-4EF1-8838-C9C77780E0AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My2DGame.Network", "My2DGame.Network\My2DGame.Network.csproj", "{7A5CFB16-BDB7-4617-803E-13533C79204E}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Component", "My2DGame.Component\My2DGame.Component.shproj", "{50B5FDF7-6D7B-4A0C-B3F8-1924D22E41DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My2DGame.Network.Server", "My2DGame.Server\My2DGame.Network.Server.csproj", "{7B24087C-47BF-433F-9559-DD783F9C3705}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Game", "My2DGame.Game\My2DGame.Game.shproj", "{66FE7C84-0FC3-41F9-82C8-C9CA80CBF191}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My2DGame.Network.Client", "My2DGame.Network.Client\My2DGame.Network.Client.csproj", "{D944102D-78EF-4E31-A2FF-3F3702879193}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My2DGame.Game", "My2DGame.Game\My2DGame.Game.csproj", "{72217D4A-84EC-46DB-96CB-96E37C12BA0D}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Network", "My2DGame.Network\My2DGame.Network.shproj", "{AF85BA45-CE9C-42C1-AB0C-9C350A7C2EDC}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		My2DGame.Component\My2DGame.Component.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
+		My2DGame.Core\My2DGame.Core.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
+		My2DGame.Game\My2DGame.Game.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
+		My2DGame.Network\My2DGame.Network.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
+		My2DGame.Component\My2DGame.Component.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
+		My2DGame.Core\My2DGame.Core.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
+		My2DGame.Game\My2DGame.Game.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
+		My2DGame.Network\My2DGame.Network.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
+		My2DGame.Component\My2DGame.Component.projitems*{50b5fdf7-6d7b-4a0c-b3f8-1924d22e41db}*SharedItemsImports = 13
+		My2DGame.Game\My2DGame.Game.projitems*{66fe7c84-0fc3-41f9-82c8-c9ca80cbf191}*SharedItemsImports = 13
+		My2DGame.Network\My2DGame.Network.projitems*{af85ba45-ce9c-42c1-ab0c-9c350a7c2edc}*SharedItemsImports = 13
+		My2DGame.Core\My2DGame.Core.projitems*{efbd20c2-1774-4ef1-8838-c9c77780e0ae}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -31,40 +39,12 @@ Global
 		{26E036E9-4F7E-48AA-A1F6-9584D01813E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26E036E9-4F7E-48AA-A1F6-9584D01813E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26E036E9-4F7E-48AA-A1F6-9584D01813E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F76840B-05E3-4472-97F6-7FCD9ED6B9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F76840B-05E3-4472-97F6-7FCD9ED6B9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F76840B-05E3-4472-97F6-7FCD9ED6B9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F76840B-05E3-4472-97F6-7FCD9ED6B9E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6742505-84C5-4348-B766-6DE29390F141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6742505-84C5-4348-B766-6DE29390F141}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6742505-84C5-4348-B766-6DE29390F141}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6742505-84C5-4348-B766-6DE29390F141}.Release|Any CPU.Build.0 = Release|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{0E1287CC-C85E-4C0E-AE7A-D803B24933A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E1287CC-C85E-4C0E-AE7A-D803B24933A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E1287CC-C85E-4C0E-AE7A-D803B24933A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E1287CC-C85E-4C0E-AE7A-D803B24933A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A5CFB16-BDB7-4617-803E-13533C79204E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A5CFB16-BDB7-4617-803E-13533C79204E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A5CFB16-BDB7-4617-803E-13533C79204E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A5CFB16-BDB7-4617-803E-13533C79204E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B24087C-47BF-433F-9559-DD783F9C3705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B24087C-47BF-433F-9559-DD783F9C3705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B24087C-47BF-433F-9559-DD783F9C3705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B24087C-47BF-433F-9559-DD783F9C3705}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D944102D-78EF-4E31-A2FF-3F3702879193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D944102D-78EF-4E31-A2FF-3F3702879193}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D944102D-78EF-4E31-A2FF-3F3702879193}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D944102D-78EF-4E31-A2FF-3F3702879193}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72217D4A-84EC-46DB-96CB-96E37C12BA0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72217D4A-84EC-46DB-96CB-96E37C12BA0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72217D4A-84EC-46DB-96CB-96E37C12BA0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72217D4A-84EC-46DB-96CB-96E37C12BA0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>50b5fdf7-6d7b-4a0c-b3f8-1924d22e41db</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>My2DGame.Component</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Position\PositionComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Script\ScriptComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Texture\TextureComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\ComponentUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Position\" />
+  </ItemGroup>
+</Project>
