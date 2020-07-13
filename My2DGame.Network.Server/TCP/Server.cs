@@ -12,16 +12,19 @@ namespace My2DGame.Network.Server.TCP {
 		private List<NetworkClient> Clients { get; } = new List<NetworkClient>();
 		public void AddConnection(NetworkClient clientItem) {
 			Clients.Add(clientItem);
+			Console.WriteLine("connect " + clientItem.Id);
 		}
 		public void RemoveConnection(Guid id) {
 			var client = Clients.FirstOrDefault(c => c.Id == id);
 			if (client != null)
 				Clients.Remove(client);
+			Console.WriteLine("remove " + id);
 		}
 		public void BroadcastMessage(byte[] data, Guid senderId) {
 			if (data.Length == 0) {
 				return;
 			}
+			Console.WriteLine("message " + senderId);
 			foreach (var client in Clients) {
 				if (client.Id != senderId) {
 					client.Stream.Write(data, 0, data.Length);
@@ -30,7 +33,7 @@ namespace My2DGame.Network.Server.TCP {
 		}
 		public void Listen() {
 			try {
-				_tcpListener = new TcpListener(IPAddress.Any, 8888);
+				_tcpListener = new TcpListener(IPAddress.Any, 9976);
 				_tcpListener.Start();
 				while (true) {
 					var tcpClient = _tcpListener.AcceptTcpClient();

@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
@@ -54,10 +55,9 @@ namespace My2DGame.Core.Scene {
 			GameObjects.DrawableEach(gameTime);
 			SpriteBatch.EndDraw();
 		}
-		public event PropertyChangedEventHandler PropertyChanged;
-		[Annotations.NotifyPropertyChangedInvocator]
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) {
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		public event SilentPropertyChangedEventHandler PropertyChanged;
+		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, bool isSilent = false) {
+			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, isSilent));
 		}
 	}
 }

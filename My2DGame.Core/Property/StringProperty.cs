@@ -1,12 +1,12 @@
-﻿namespace My2DGame.Core.Property {
+﻿using System;
+
+namespace My2DGame.Core.Property {
 	public class StringProperty : BaseProperty<string> {
 		public StringProperty(string value = default) {
 			Value = value;
 		}
 		public override object Clone() {
-			return new StringProperty {
-				Value = Value
-			};
+			return new StringProperty(Value);
 		}
 	}
 }

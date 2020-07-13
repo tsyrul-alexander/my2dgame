@@ -1,9 +1,10 @@
 ﻿using System;
 using My2DGame.Core;
 using My2DGame.Core.Scene;
-using My2DGame.Network.Tracker;
+using My2DGame.Network.Client.Contract;
+using My2DGame.Network.Client.Tracker;
 
-namespace My2DGame.Network.Utilities {
+namespace My2DGame.Network.Client.Utilities {
 	public static class TrackerUtilities {
 		public static ITracker<IScene> Tracked(this IScene scene) {
 			return new SceneTracker(scene);

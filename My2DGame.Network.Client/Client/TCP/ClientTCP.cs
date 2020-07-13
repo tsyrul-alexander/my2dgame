@@ -1,0 +1,45 @@
+﻿using System;
+using System.Net.Sockets;
+using System.Threading.Tasks;
+using My2DGame.Network.Client.Contract;
+using My2DGame.Network.Client.Utilities;
+
+namespace My2DGame.Network.Client.Client.TCP {
+	public class ClientTcp : INetworkClient {
+		private TcpClient _client;
+		private NetworkStream _stream;
+		public event Action<INetworkObject> Message;
+		public void Connect(string ipAddress, int port) {
+			_client = new TcpClient(ipAddress, port);
+			_stream = _client.GetStream();
+			Task.Run(() => SubscribeMessage(_stream));
+		}
+		public void Send(INetworkObject obj) {
+			var data = obj.ToBytes();
+			_stream.Write(data, 0, data.Length);
+		}
+		protected virtual void SubscribeMessage(NetworkStream stream) {
+			try {
+				while (true) {
+					if (!stream.DataAvailable)
+						continue;
+					var message = stream.GetMessage();
+					OnMessage(message as INetworkObject);
+				}
+			} catch (Exception ex) {
+				Disconnect(); //todo log
+				throw;
+			}
+		}
+		public void Disconnect() {
+			_stream?.Close();
+			_client?.Close();
+		}
+		public bool GetIsConnect() {
+			return _client.Connected;
+		}
+		protected virtual void OnMessage(INetworkObject obj) {
+			Message?.Invoke(obj);
+		}
+	}
+}

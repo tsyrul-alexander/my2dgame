@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -27,8 +27,11 @@
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1375-develop" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1375-develop" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\My2DGame.Network\My2DGame.Network.csproj" />
+  </ItemGroup>
   <Import Project="..\My2DGame.Component\My2DGame.Component.projitems" Label="Shared" />
   <Import Project="..\My2DGame.Core\My2DGame.Core.projitems" Label="Shared" />
   <Import Project="..\My2DGame.Game\My2DGame.Game.projitems" Label="Shared" />
-  <Import Project="..\My2DGame.Network\My2DGame.Network.projitems" Label="Shared" />
+  <Import Project="..\My2DGame.Network.Client\My2DGame.Network.Client.projitems" Label="Shared" />
 </Project>

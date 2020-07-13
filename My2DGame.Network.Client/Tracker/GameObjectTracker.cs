@@ -1,19 +1,20 @@
 ﻿using My2DGame.Core.GameObject;
-using My2DGame.Network.Utilities;
+using My2DGame.Network.Client.Contract;
+using My2DGame.Network.Client.Utilities;
 
-namespace My2DGame.Network.Tracker {
+namespace My2DGame.Network.Client.Tracker {
 	public class GameObjectTracker : BaseTracker<IGameObject> {
 		public GameObjectTracker(IGameObject value) : base(value) { }
-		public override void Initialize() {
-			base.Initialize();
-
-		}
 		public override void UpdateProperty(PropertyValue propertyValue) {
 			if (Value.SetDrawable(propertyValue) || Value.SetUpdateable(propertyValue)) {
 				return;
-			} else if (propertyValue.Name == nameof(IGameObject.Color)) {
-				Value.Color = propertyValue.GetColor();
 			}
+		}
+		protected override PropertyValue GetPropertyValue(string columnName) {
+			if (columnName == nameof(IGameObject.Enabled)) {
+				return new PropertyValue(columnName, Value.Enabled);
+			}
+			return null;
 		}
 	}
 }

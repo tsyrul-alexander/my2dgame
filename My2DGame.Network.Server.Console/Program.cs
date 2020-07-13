@@ -1,8 +1,16 @@
-﻿namespace My2DGame.Network.Server.Console {
+﻿using System;
+
+namespace My2DGame.Network.Server.Console {
 	class Program {
 		static void Main(string[] args) {
 			var server = new TCP.Server();
-			server.Listen();
+			try {
+				server.Listen();
+			} catch (Exception e) {
+				server.Disconnect();
+				System.Console.WriteLine(e);
+				throw;
+			}
 		}
 	}
 }

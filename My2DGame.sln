@@ -13,21 +13,22 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Component", "My2DG
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Game", "My2DGame.Game\My2DGame.Game.shproj", "{66FE7C84-0FC3-41F9-82C8-C9CA80CBF191}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Network", "My2DGame.Network\My2DGame.Network.shproj", "{AF85BA45-CE9C-42C1-AB0C-9C350A7C2EDC}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Network.Client", "My2DGame.Network.Client\My2DGame.Network.Client.shproj", "{AF85BA45-CE9C-42C1-AB0C-9C350A7C2EDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "My2DGame.Network", "My2DGame.Network\My2DGame.Network.csproj", "{95BDD566-A8F1-40CE-9AB8-33E3C973A88E}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		My2DGame.Component\My2DGame.Component.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
 		My2DGame.Core\My2DGame.Core.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
 		My2DGame.Game\My2DGame.Game.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
-		My2DGame.Network\My2DGame.Network.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
+		My2DGame.Network.Client\My2DGame.Network.Client.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
 		My2DGame.Component\My2DGame.Component.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Core\My2DGame.Core.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Game\My2DGame.Game.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
-		My2DGame.Network\My2DGame.Network.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
+		My2DGame.Network.Client\My2DGame.Network.Client.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Component\My2DGame.Component.projitems*{50b5fdf7-6d7b-4a0c-b3f8-1924d22e41db}*SharedItemsImports = 13
 		My2DGame.Game\My2DGame.Game.projitems*{66fe7c84-0fc3-41f9-82c8-c9ca80cbf191}*SharedItemsImports = 13
-		My2DGame.Network\My2DGame.Network.projitems*{af85ba45-ce9c-42c1-ab0c-9c350a7c2edc}*SharedItemsImports = 13
 		My2DGame.Core\My2DGame.Core.projitems*{efbd20c2-1774-4ef1-8838-c9c77780e0ae}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +46,10 @@ Global
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{410C0262-131C-4D0E-910D-D01B4F7143E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{95BDD566-A8F1-40CE-9AB8-33E3C973A88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BDD566-A8F1-40CE-9AB8-33E3C973A88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BDD566-A8F1-40CE-9AB8-33E3C973A88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BDD566-A8F1-40CE-9AB8-33E3C973A88E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

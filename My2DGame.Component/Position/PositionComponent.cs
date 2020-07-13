@@ -1,5 +1,5 @@
-﻿using System.ComponentModel;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using My2DGame.Core;
 using My2DGame.Core.Component.GameObject;
 using My2DGame.Core.Property;
 
@@ -8,8 +8,8 @@ namespace My2DGame.Component.Position {
 		public DoubleProperty X { get; }
 		public DoubleProperty Y { get; }
 		public PositionComponent(int x, int y) {
-			X = new DoubleProperty(x);
-			Y = new DoubleProperty(y);
+			X = new DoubleProperty(x, 0.5);
+			Y = new DoubleProperty(y, 0.5);
 		}
 		public override void Initialize() {
 			base.Initialize();
@@ -20,7 +20,7 @@ namespace My2DGame.Component.Position {
 		public override IProperty[] GetProperties() {
 			return new IProperty[] {X, Y};
 		}
-		private void PositionOnPropertyChanged(object sender, PropertyChangedEventArgs e) {
+		private void PositionOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
 			if (e.PropertyName == nameof(IntegerProperty.Value)) {
 				UpdateGameObjectPosition();
 			}

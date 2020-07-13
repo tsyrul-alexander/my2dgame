@@ -10,7 +10,7 @@ namespace My2DGame.Core.GameObject {
 	public class GameObject : BaseSprite, IGameObject {
 		private bool _enabled = true;
 		private bool _visible = true;
-		public event PropertyChangedEventHandler PropertyChanged;
+		public event SilentPropertyChangedEventHandler PropertyChanged;
 		public IScene Scene { get; internal set; }
 		public GameObjectComponentCollection Components { get; } = new GameObjectComponentCollection();
 		public bool Enabled {
@@ -54,9 +54,8 @@ namespace My2DGame.Core.GameObject {
 			newGameObject.Initialize();
 			return newGameObject;
 		}
-		[NotifyPropertyChangedInvocator]
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) {
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, bool isSilent = false) {
+			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, isSilent));
 		}
 	}
 }

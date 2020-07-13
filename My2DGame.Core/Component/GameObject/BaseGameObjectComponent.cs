@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using My2DGame.Core.GameObject;
@@ -10,7 +9,7 @@ namespace My2DGame.Core.Component.GameObject {
 		private bool _enabled;
 		private bool _visible;
 		private IGameObject _gameObject;
-		public event PropertyChangedEventHandler PropertyChanged;
+		public event SilentPropertyChangedEventHandler PropertyChanged;
 		public IGameObject GameObject {
 			get => _gameObject;
 			set {
@@ -45,9 +44,8 @@ namespace My2DGame.Core.Component.GameObject {
 		public object Clone() {
 			throw new NotImplementedException();
 		}
-		[Annotations.NotifyPropertyChangedInvocator]
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) {
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, bool isSilent = false) {
+			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, isSilent));
 		}
 	}
 }

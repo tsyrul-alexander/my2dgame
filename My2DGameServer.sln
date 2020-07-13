@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My2DGame.Network.Server.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My2DGame.Network.Server", "My2DGame.Network.Server\My2DGame.Network.Server.csproj", "{C6F5D256-8506-4F6C-B51A-08DED93EAD19}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "My2DGame.Network", "My2DGame.Network\My2DGame.Network.csproj", "{2D5FD7EF-8E2D-4B1A-BBE5-29044FB88E7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C6F5D256-8506-4F6C-B51A-08DED93EAD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F5D256-8506-4F6C-B51A-08DED93EAD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6F5D256-8506-4F6C-B51A-08DED93EAD19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D5FD7EF-8E2D-4B1A-BBE5-29044FB88E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D5FD7EF-8E2D-4B1A-BBE5-29044FB88E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D5FD7EF-8E2D-4B1A-BBE5-29044FB88E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D5FD7EF-8E2D-4B1A-BBE5-29044FB88E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

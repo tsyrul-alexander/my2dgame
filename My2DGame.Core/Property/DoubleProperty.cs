@@ -2,21 +2,21 @@
 
 namespace My2DGame.Core.Property {
 	public class DoubleProperty : BaseProperty<double> {
+		private readonly double _propertyChangeStep;
 		private double _lastChangedValue;
-		public DoubleProperty(double value = default) {
+		public DoubleProperty(double value = default, double propertyChangeStep = 0.001) {
+			_propertyChangeStep = propertyChangeStep;
 			Value = value;
 		}
-		protected override void OnPropertyChanged(string propertyName = null) {
-			if (propertyName == nameof(Value) && Math.Abs(Value - _lastChangedValue) < 0.1) {
+		protected override void OnPropertyChanged(string propertyName = null, bool isSilent = false) {
+			if (propertyName == nameof(Value) && Math.Abs(Value - _lastChangedValue) < _propertyChangeStep) {
 				return;
 			}
 			_lastChangedValue = Value;
-			base.OnPropertyChanged(propertyName);
+			base.OnPropertyChanged(propertyName, isSilent);
 		}
 		public override object Clone() {
-			return new DoubleProperty{
-				Value = Value
-			};
+			return new DoubleProperty(Value);
 		}
 	}
 }
