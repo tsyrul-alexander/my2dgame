@@ -6,5 +6,6 @@ namespace My2DGame.Network.Contract {
 		public Guid Id { get; set; }
 		public string ManagerName { get; set; }
 		public PropertyValue Value { get; set; }
+		public Guid RequestItemId => Id;
 	}
 }

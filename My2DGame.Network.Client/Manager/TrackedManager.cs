@@ -16,7 +16,7 @@ namespace My2DGame.Network.Client.Manager {
 		protected abstract ITracker<T> CreateTracked(T value);
 		public event Action<ManagerPropertyValue> ItemPropertyChanged;
 		public virtual void Initialize() { }
-		public virtual void Create(Guid id, T item) {
+		public virtual void Add(Guid id, T item) {
 			var tracker = CreateTracked(item);
 			tracker.Id = id;
 			tracker.Initialize();

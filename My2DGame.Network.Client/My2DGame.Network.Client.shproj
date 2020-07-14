@@ -25,7 +25,6 @@
     <Compile Include="Tracker\GameObjectTracker.cs" />
     <Compile Include="Tracker\ITracker.cs" />
     <Compile Include="Tracker\SceneTracker.cs" />
-    <Compile Include="Utilities\NetworkUtilities.cs" />
     <Compile Include="Utilities\TrackerUtilities.cs" />
   </ItemGroup>
   <ItemGroup>

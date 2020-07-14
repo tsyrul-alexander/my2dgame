@@ -46,5 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TCP\Server.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\My2DGame.Network\My2DGame.Network.csproj">
+      <Project>{2d5fd7ef-8e2d-4b1a-bbe5-29044fb88e7d}</Project>
+      <Name>My2DGame.Network</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

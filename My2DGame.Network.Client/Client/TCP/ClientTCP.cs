@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Sockets;
 using System.Threading.Tasks;
-using My2DGame.Network.Client.Utilities;
 using My2DGame.Network.Contract;
+using My2DGame.Network.Utilities;
 
 namespace My2DGame.Network.Client.Client.TCP {
 	public class ClientTcp : INetworkClient {
@@ -15,7 +16,7 @@ namespace My2DGame.Network.Client.Client.TCP {
 			Task.Run(() => SubscribeMessage(_stream));
 		}
 		public void Send(INetworkObject obj) {
-			var data = obj.ToBytes();
+			var data = obj.ToBytes().GetRequestData(obj.RequestItemId).ToArray();
 			_stream.Write(data, 0, data.Length);
 		}
 		protected virtual void SubscribeMessage(NetworkStream stream) {
@@ -23,7 +24,7 @@ namespace My2DGame.Network.Client.Client.TCP {
 				while (true) {
 					if (!stream.DataAvailable)
 						continue;
-					var message = stream.GetMessage();
+					var message = stream.GetMessageObj();
 					OnMessage(message as INetworkObject);
 				}
 			} catch (Exception ex) {

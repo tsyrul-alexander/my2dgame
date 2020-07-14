@@ -2,7 +2,7 @@
 
 namespace My2DGame.Network.Contract {
 	[Serializable]
-	public class PropertyValue: INetworkObject {
+	public class PropertyValue {
 		public string Name { get; set; }
 		protected object Value { get; set; }
 		public PropertyValue(string name, bool value): this(name) {

@@ -31,9 +31,9 @@ namespace My2DGame.Network.Server.TCP {
 				}
 			}
 		}
-		public void Listen() {
+		public void Listen(IPAddress address, int port) {
 			try {
-				_tcpListener = new TcpListener(IPAddress.Any, 9976);
+				_tcpListener = new TcpListener(address, port);
 				_tcpListener.Start();
 				while (true) {
 					var tcpClient = _tcpListener.AcceptTcpClient();

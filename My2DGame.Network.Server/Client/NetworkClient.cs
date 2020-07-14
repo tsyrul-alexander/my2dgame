@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Net.Sockets;
+using My2DGame.Network.Utilities;
 
-namespace My2DGame.Network.Server.Client
-{
-	public class NetworkClient
-	{
+namespace My2DGame.Network.Server.Client {
+	public class NetworkClient {
 		public Guid Id { get; }
 		protected internal NetworkStream Stream { get; private set; }
 		private readonly TcpClient _client;
@@ -20,8 +20,9 @@ namespace My2DGame.Network.Server.Client
 			try {
 				Stream = _client.GetStream();
 				while (true) {
-					var message = GetMessage(Stream);
-					_server.BroadcastMessage(message, Id);
+					var message = Stream.GetMessageBytes();
+					var (id, date) = message.GetRequestIdData();
+					_server.BroadcastMessage(date.ToArray(), Id);
 				}
 			} catch (Exception ex) {
 				Console.WriteLine(ex.Message);
@@ -34,16 +35,6 @@ namespace My2DGame.Network.Server.Client
 			Stream?.Close();
 			_client?.Close();
 		}
-		protected virtual byte[] GetMessage(NetworkStream stream) {
-			var data = new byte[1024];
-			using (var ms = new MemoryStream()) {
-				do {
-					var bytes = Stream.Read(data, 0, data.Length);
-					ms.Write(data, 0, bytes);
-				}
-				while (Stream.DataAvailable);
-				return ms.ToArray();
-			}
-		}
+		
 	}
 }
