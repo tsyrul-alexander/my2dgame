@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
 using My2DGame.Core.GameObject;
+using My2DGame.Core.GameObject.Collider;
 using My2DGame.Core.Manager;
 using My2DGame.Core.UI;
 
@@ -9,6 +9,7 @@ namespace My2DGame.Core.Scene {
 		string Name { get; set; }
 		ISpriteBatch SpriteBatch { get; }
 		IAssetManager AssetManager { get; }
+		ICollisionManager CollisionManager { get; }
 		ObservableCollection<IGameObject> GameObjects { get; }
 		IGameObject CreateGameObject();
 		void Initialize();

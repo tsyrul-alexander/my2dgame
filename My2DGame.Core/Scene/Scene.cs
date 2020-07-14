@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using My2DGame.Core.GameObject;
+using My2DGame.Core.GameObject.Collider;
 using My2DGame.Core.Manager;
 using My2DGame.Core.UI;
 using My2DGame.Core.Utilities;
@@ -15,6 +14,7 @@ namespace My2DGame.Core.Scene {
 		public string Name { get; set; }
 		public ISpriteBatch SpriteBatch { get; }
 		public IAssetManager AssetManager { get; }
+		public ICollisionManager CollisionManager { get; }
 		public bool Enabled {
 			get => _enabled;
 			set {
@@ -34,9 +34,10 @@ namespace My2DGame.Core.Scene {
 			}
 		}
 		public ObservableCollection<IGameObject> GameObjects { get; } = new ObservableCollection<IGameObject>();
-		public Scene(ISpriteBatch spriteBatch, IAssetManager assetManager) {
+		public Scene(ISpriteBatch spriteBatch, IAssetManager assetManager, ICollisionManager collisionManager) {
 			SpriteBatch = spriteBatch;
 			AssetManager = assetManager;
+			CollisionManager = collisionManager;
 		}
 		
 		public IGameObject CreateGameObject() {
@@ -49,6 +50,7 @@ namespace My2DGame.Core.Scene {
 		}
 		public void Update(GameTime gameTime) {
 			GameObjects.UpdateableEach(gameTime);
+			CollisionManager.Update(gameTime);
 		}
 		public void Draw(GameTime gameTime) {
 			SpriteBatch.StartDraw();

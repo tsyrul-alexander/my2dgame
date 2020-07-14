@@ -13,6 +13,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Component\GameObject\GameObjectComponentCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Component\GameObject\IGameObjectComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Component\GameObject\IGameObjectComponentCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObject\Collider\CollisionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObject\Collider\ICollisionItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObject\Collider\ICollisionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameObject\GameObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameObject\IGameObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IDrawable.cs" />
