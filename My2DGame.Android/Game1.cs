@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using My2DGame.Core.UI;
@@ -22,7 +23,7 @@ namespace My2DGame.Android {
 			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
 			_networkClient = new ClientTcp();
-			_gameSynchronizer = new GameSynchronizer(_networkClient);
+			_gameSynchronizer = new GameSynchronizer(_networkClient, Guid.Parse("9a3a5d67-85ab-4509-bc29-72d025b435be"));
 			_game = new TestGame(_gameSynchronizer, _gameInput, Services, Content.RootDirectory);
 		}
 		protected override void LoadContent() {

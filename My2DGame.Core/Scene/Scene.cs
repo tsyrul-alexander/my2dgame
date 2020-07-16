@@ -50,7 +50,6 @@ namespace My2DGame.Core.Scene {
 		}
 		public void Update(GameTime gameTime) {
 			GameObjects.UpdateableEach(gameTime);
-			CollisionManager.Update(gameTime);
 		}
 		public void Draw(GameTime gameTime) {
 			SpriteBatch.StartDraw();

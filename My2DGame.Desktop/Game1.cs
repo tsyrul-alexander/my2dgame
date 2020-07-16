@@ -24,7 +24,7 @@ namespace My2DGame.Desktop {
 			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
 			_networkClient = new ClientTcp();
-			_gameSynchronizer = new GameSynchronizer(_networkClient);
+			_gameSynchronizer = new GameSynchronizer(_networkClient, Guid.Parse("9a3a5d67-85ab-4509-bc29-72d025b435be"));
 			_myGame = new TestGame(_gameSynchronizer, _gameInput, Services, Content.RootDirectory);
 		}
 
