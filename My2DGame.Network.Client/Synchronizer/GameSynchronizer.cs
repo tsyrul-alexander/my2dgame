@@ -9,12 +9,14 @@ using My2DGame.Network.Contract;
 
 namespace My2DGame.Network.Client.Synchronizer {
 	public class GameSynchronizer : IGameSynchronizer {
+		private readonly Guid _roomId;
 		public INetworkClient NetworkClient { get; }
 		public ITrackedManager<IScene> SceneTrackedManager { get; }
 		public ITrackedManager<IGameObject> GameObjectTrackedManager { get; }
 		public ITrackedManager<IGameObjectComponent> GameObjectComponentTrackedManager { get; }
 		public ITrackedManager<IProperty> ComponentPropertyTrackedManager { get; }
-		public GameSynchronizer(INetworkClient networkClient) {
+		public GameSynchronizer(INetworkClient networkClient, Guid roomId) {
+			_roomId = roomId;
 			SceneTrackedManager = new SceneTrackedManager(this);
 			GameObjectTrackedManager = new GameObjectTrackedManager(this);
 			GameObjectComponentTrackedManager = new GameObjectComponentTrackedManager(this);
@@ -26,7 +28,7 @@ namespace My2DGame.Network.Client.Synchronizer {
 			ComponentPropertyTrackedManager.ItemPropertyChanged += TrackedManagerOnItemPropertyChanged;
 		}
 		private void TrackedManagerOnItemPropertyChanged(ManagerPropertyValue obj) {
-			NetworkClient.Send(obj);
+			NetworkClient.Send(obj, _roomId);
 		}
 		public virtual void Initialize(string ipAddress, int port) {
 			NetworkClient.Connect(ipAddress, port);
@@ -43,6 +45,7 @@ namespace My2DGame.Network.Client.Synchronizer {
 			//	});
 			//});
 			NetworkClient.Message += NetworkClientOnMessage;
+			NetworkClient.Send(null, _roomId);
 		}
 		private void NetworkClientOnMessage(INetworkObject obj) {
 			if (obj is ManagerPropertyValue managerPropertyValue) {

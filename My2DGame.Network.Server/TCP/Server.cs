@@ -27,9 +27,12 @@ namespace My2DGame.Network.Server.TCP {
 			Console.WriteLine("message " + senderId);
 			foreach (var client in Clients) {
 				if (client.Id != senderId) {
-					client.Stream.Write(data, 0, data.Length);
+					Send(client, data);
 				}
 			}
+		}
+		public void Send(NetworkClient client, byte[] data) {
+			client.Stream.Write(data, 0, data.Length);
 		}
 		public void Listen(IPAddress address, int port) {
 			try {

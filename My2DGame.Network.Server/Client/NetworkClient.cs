@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using My2DGame.Network.Utilities;
@@ -16,13 +15,22 @@ namespace My2DGame.Network.Server.Client {
 			Id = id;
 		}
 
-		public void Process() {
+		public void Process() {//todo refactoring
 			try {
 				Stream = _client.GetStream();
 				while (true) {
 					var message = Stream.GetMessageBytes();
-					var (id, date) = message.GetRequestIdData();
-					_server.BroadcastMessage(date.ToArray(), Id);
+					message.GetRequestInfo(out var data, out var itemId, out var roomId);
+					if (itemId == Guid.Empty) {
+						if (GameRoomManager.GetIfExistsRoom(roomId)) {
+							foreach (var roomData in GameRoomManager.GetData(roomId)) {
+								_server.Send(this, roomData.Value);
+							}
+						}
+						continue;
+					}
+					GameRoomManager.Save(roomId, itemId, data);
+					_server.BroadcastMessage(data, Id);
 				}
 			} catch (Exception ex) {
 				Console.WriteLine(ex.Message);

@@ -10,9 +10,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace My2DGame.Network.Utilities {
 	public static class NetworkUtilities {
 		public const int UniqueIdByteArraySize = 16;
+		public const int RoomIdByteArraySize = 16;
 		public const int LengthByteArraySize = 1;
 		public const int LengthDivisor = 8;
 		public static byte[] ToBytes(this object obj, Func<BinaryFormatter, SurrogateSelector> selector = null) {
+			if (obj == null) {
+				return new byte[0];
+			}
 			var bf = new BinaryFormatter();
 			if (selector != null) {
 				bf.SurrogateSelector = selector(bf);
@@ -26,15 +30,31 @@ namespace My2DGame.Network.Utilities {
 			return data;
 		}
 
-		public static IEnumerable<byte> GetRequestData(this byte[] data, Guid id) {
+		public static IEnumerable<byte> GetRequestData(this byte[] data, Guid itemId, Guid roomId) {
 			var lenArray = new[] {
 				ConvertLengthToByte(data.Length)
 			};
-			return lenArray.Concat(ConvertIdToBytes(id).Concat(data));
+			var dataArr = lenArray.Concat(ConvertIdToBytes(roomId));
+			dataArr = dataArr.Concat(ConvertIdToBytes(itemId));
+			return dataArr.Concat(data);
 		}
 
-		public static (Guid id, IEnumerable<byte> data) GetRequestIdData(this byte[] data) {
-			return (ConvertBytesToId(data.Take(UniqueIdByteArraySize).ToArray()), data.Skip(UniqueIdByteArraySize));
+		public static void GetRequestInfo(this byte[] requestData, out byte[] data, out Guid itemId, out Guid roomId) {
+			roomId = ConvertBytesToId(requestData.Take(UniqueIdByteArraySize).ToArray());
+			itemId = ConvertBytesToId(requestData.Range(UniqueIdByteArraySize, UniqueIdByteArraySize + RoomIdByteArraySize));
+			data = requestData.Skip(UniqueIdByteArraySize + RoomIdByteArraySize).ToArray();
+		}
+
+		public static T[] Range<T>(this T[] source, int start, int end) {
+			if (end < 0) {
+				end = source.Length + end;
+			}
+			var len = end - start;
+			var res = new T[len];
+			for (var i = 0; i < len; i++) {
+				res[i] = source[i + start];
+			}
+			return res;
 		}
 
 		public static byte[] GetMessageBytes(this NetworkStream stream) {

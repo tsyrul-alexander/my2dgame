@@ -15,6 +15,16 @@ namespace My2DGame.Network.Client.Manager {
 		}
 		protected abstract ITracker<T> CreateTracked(T value);
 		public event Action<ManagerPropertyValue> ItemPropertyChanged;
+		public virtual bool GetIfExistsItem(T item, out Guid networkId) {
+			foreach (var (key, tracker) in Trackers) {
+				if (tracker.Value.Equals(item)) {
+					networkId = key;
+					return true;
+				}
+			}
+			networkId = Guid.Empty;
+			return false;
+		}
 		public virtual void Initialize() { }
 		public virtual void Add(Guid id, T item) {
 			var tracker = CreateTracked(item);

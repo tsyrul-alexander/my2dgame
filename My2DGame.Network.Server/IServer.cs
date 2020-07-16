@@ -8,6 +8,7 @@ namespace My2DGame.Network.Server
 		void Listen(IPAddress address, int port);
 		void Disconnect();
 		void BroadcastMessage(byte[] data, Guid senderId);
+		void Send(NetworkClient client, byte[] data);
 		void AddConnection(NetworkClient clientItem);
 		void RemoveConnection(Guid id);
 	}
