@@ -18,6 +18,7 @@
     <Compile Include="Manager\SceneTrackedManager.cs" />
     <Compile Include="Manager\TrackedManager.cs" />
     <Compile Include="Synchronizer\GameSynchronizer.cs" />
+    <Compile Include="Synchronizer\GameSynchronizerOptions.cs" />
     <Compile Include="Synchronizer\IGameSynchronizer.cs" />
     <Compile Include="Tracker\BaseTracker.cs" />
     <Compile Include="Tracker\ComponentPropertyTracker.cs" />
@@ -25,14 +26,9 @@
     <Compile Include="Tracker\GameObjectTracker.cs" />
     <Compile Include="Tracker\ITracker.cs" />
     <Compile Include="Tracker\SceneTracker.cs" />
+    <Compile Include="Utilities\ExtensionUtilities.cs" />
     <Compile Include="Utilities\TrackerUtilities.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Surrogate\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My2DGame.Network.Client.projitems" />
-  </ItemGroup>
-  <Import Project="My2DGame.Network.projitems" Label="Shared" />
+  <Import Project="My2DGame.Network.Client.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.CSharp.targets" />
 </Project>

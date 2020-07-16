@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace My2DGame.Core.Manager {
 	public class AssetManager : IAssetManager {
-		public string AssetFolderPath { get; }
+		public AssetManagerOptions Options { get; }
 		private readonly IFileManager _fileManager;
 		private const string TextureFolder = "Texture";
 		private readonly ContentManager _contentManager;
-		public AssetManager(IFileManager fileManager, IServiceProvider serviceProvider, string assetFolderPath) {
-			AssetFolderPath = assetFolderPath;
+		public AssetManager(AssetManagerOptions options, IFileManager fileManager, IServiceProvider serviceProvider) {
+			Options = options;
 			_fileManager = fileManager;
 			_contentManager = new ContentManager(serviceProvider);
 		}
@@ -21,7 +21,7 @@ namespace My2DGame.Core.Manager {
 			return _fileManager.CombinePath(GetTextureFolder(), textureName);
 		}
 		protected virtual string GetTextureFolder() {
-			return _fileManager.CombinePath(AssetFolderPath, TextureFolder);
+			return _fileManager.CombinePath(Options.AssetFolderPath, TextureFolder);
 		}
 	}
 }

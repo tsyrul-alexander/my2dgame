@@ -3,6 +3,7 @@
 	public interface IFileManager {
 		void SaveToFile(byte[] bytes, string path);
 		byte[] ReadWithFile(string path);
+		string ReadAllText(string path);
 		bool Exists(string path);
 		string GetDirectory(string path);
 		void CreateDirectory(string directory);

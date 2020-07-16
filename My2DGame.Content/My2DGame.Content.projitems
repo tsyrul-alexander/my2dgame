@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>afdb573b-1512-4bae-8609-bce08f54618d</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>My2DGame.Content</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\BaseContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\Component\JsonGameObjectComponentContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\GameObject\JsonGameObjectContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\IContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\Property\JsonPropertyContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\Scene\JsonSceneContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\ExtensionUtilities.cs" />
+  </ItemGroup>
+</Project>

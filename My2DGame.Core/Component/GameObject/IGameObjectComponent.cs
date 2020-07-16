@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using My2DGame.Core.GameObject;
 using My2DGame.Core.Property;
 

@@ -8,6 +8,9 @@ namespace My2DGame.Core.Manager {
 		public byte[] ReadWithFile(string path) {
 			return System.IO.File.ReadAllBytes(path);
 		}
+		public string ReadAllText(string path) {
+			return File.ReadAllText(path);
+		}
 		public bool Exists(string path) {
 			return Directory.Exists(path) || System.IO.File.Exists(path);
 		}

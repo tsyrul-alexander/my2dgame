@@ -13,7 +13,7 @@ namespace My2DGame.Network.Client.Synchronizer {
 		ITrackedManager<IGameObject> GameObjectTrackedManager { get; }
 		ITrackedManager<IGameObjectComponent> GameObjectComponentTrackedManager { get; }
 		ITrackedManager<IProperty> ComponentPropertyTrackedManager { get; }
-		void Initialize(string ipAddress, int port);
+		void Initialize();
 		void SetScenePropertyValue(ManagerPropertyValue propertyValue);
 		void SetGameObjectPropertyValue(ManagerPropertyValue propertyValue);
 		void SetGameObjectComponentPropertyValue(ManagerPropertyValue propertyValue);

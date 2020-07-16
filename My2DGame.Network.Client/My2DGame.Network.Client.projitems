@@ -6,7 +6,7 @@
     <SharedGUID>af85ba45-ce9c-42c1-ab0c-9c350a7c2edc</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>My2DGame.Network</Import_RootNamespace>
+    <Import_RootNamespace>My2DGame.Network.Client</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Client\INetworkClient.cs" />
@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Manager\SceneTrackedManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Synchronizer\GameSynchronizer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Synchronizer\IGameSynchronizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Synchronizer\GameSynchronizerOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Manager\TrackedManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tracker\BaseTracker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tracker\ComponentPropertyTracker.cs" />
@@ -26,8 +27,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Tracker\ITracker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Tracker\SceneTracker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\TrackerUtilities.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Surrogate\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\ExtensionUtilities.cs" />
   </ItemGroup>
 </Project>
