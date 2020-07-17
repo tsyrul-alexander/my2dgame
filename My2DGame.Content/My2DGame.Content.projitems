@@ -10,11 +10,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Manager\BaseContentManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Manager\Component\JsonGameObjectComponentContentManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Manager\GameObject\JsonGameObjectContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\Json\JsonGameObjectComponentContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\Json\JsonGameObjectContentManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Manager\IContentManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Manager\Property\JsonPropertyContentManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Manager\Scene\JsonSceneContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\Json\JsonPropertyContentManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Manager\Json\JsonSceneContentManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\ExtensionUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\JsonUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Manager\Json\" />
   </ItemGroup>
 </Project>

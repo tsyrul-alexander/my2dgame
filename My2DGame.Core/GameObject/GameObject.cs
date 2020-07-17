@@ -10,7 +10,7 @@ namespace My2DGame.Core.GameObject {
 	public class GameObject : BaseSprite, IGameObject {
 		private bool _enabled = true;
 		private bool _visible = true;
-		public IScene Scene { get; internal set; }
+		public IScene Scene { get; set; }
 		public GameObjectComponentCollection Components { get; } = new GameObjectComponentCollection();
 		public bool Enabled {
 			get => _enabled;

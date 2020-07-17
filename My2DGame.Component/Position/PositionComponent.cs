@@ -7,9 +7,10 @@ namespace My2DGame.Component.Position {
 	public class PositionComponent : BaseGameObjectComponent {
 		public DoubleProperty X { get; }
 		public DoubleProperty Y { get; }
-		public PositionComponent(int x, int y) {
-			X = new DoubleProperty(x, 0.5);
-			Y = new DoubleProperty(y, 0.5);
+		public PositionComponent(int x, int y): this(new DoubleProperty(x, 0.5), new DoubleProperty(y, 0.5)) { }
+		public PositionComponent(DoubleProperty x, DoubleProperty y) {
+			X = x;
+			Y = y;
 		}
 		public override void Initialize() {
 			base.Initialize();

@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)GameOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IGame.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestGame\GameInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestGame\Script\PersonScriptAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TestGame\TestGame.cs" />
   </ItemGroup>
 </Project>

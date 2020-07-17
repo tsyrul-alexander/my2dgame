@@ -13,11 +13,13 @@ namespace My2DGame.Component.Collider {
 		public IntegerProperty YProperty { get; }
 		public IntegerProperty WidthProperty { get; }
 		public IntegerProperty HeightProperty { get; }
-		public ColliderComponent(int x, int y, int width, int height) {
-			XProperty = new IntegerProperty(x);
-			YProperty = new IntegerProperty(y);
-			WidthProperty = new IntegerProperty(width);
-			HeightProperty = new IntegerProperty(height);
+		public ColliderComponent(int x, int y, int width, int height) : this(new IntegerProperty(x),
+			new IntegerProperty(y), new IntegerProperty(width), new IntegerProperty(height)) { }
+		public ColliderComponent(IntegerProperty xProperty, IntegerProperty yProperty, IntegerProperty widthProperty, IntegerProperty heightProperty) {
+			XProperty = xProperty;
+			YProperty = yProperty;
+			WidthProperty = widthProperty;
+			HeightProperty = heightProperty;
 		}
 		public override void Initialize() {
 			base.Initialize();

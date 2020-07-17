@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using My2DGame.Core.GameObject;
@@ -9,9 +10,10 @@ using My2DGame.Core.Utilities;
 
 namespace My2DGame.Core.Scene {
 	public class Scene : IScene {
-		private bool _enabled;
-		private bool _visible;
+		private bool _enabled = true;
+		private bool _visible = true;
 		public string Name { get; set; }
+		public IServiceProvider ServiceProvider { get; }
 		public ISpriteBatch SpriteBatch { get; }
 		public IAssetManager AssetManager { get; }
 		public ICollisionManager CollisionManager { get; }
@@ -34,10 +36,11 @@ namespace My2DGame.Core.Scene {
 			}
 		}
 		public ObservableCollection<IGameObject> GameObjects { get; } = new ObservableCollection<IGameObject>();
-		public Scene(ISpriteBatch spriteBatch, IAssetManager assetManager, ICollisionManager collisionManager) {
+		public Scene(ISpriteBatch spriteBatch, IAssetManager assetManager, ICollisionManager collisionManager, IServiceProvider serviceProvider) {
 			SpriteBatch = spriteBatch;
 			AssetManager = assetManager;
 			CollisionManager = collisionManager;
+			ServiceProvider = serviceProvider;
 		}
 		
 		public IGameObject CreateGameObject() {
@@ -48,10 +51,20 @@ namespace My2DGame.Core.Scene {
 		public void Initialize() {
 			GameObjects.ForEach(o => o.Initialize());
 		}
+		public void SetActive(bool isActive) {
+			Enabled = isActive;
+			Visible = isActive;
+		}
 		public void Update(GameTime gameTime) {
+			if (!Enabled) {
+				return;
+			}
 			GameObjects.UpdateableEach(gameTime);
 		}
 		public void Draw(GameTime gameTime) {
+			if (!Visible) {
+				return;
+			}
 			SpriteBatch.StartDraw();
 			GameObjects.DrawableEach(gameTime);
 			SpriteBatch.EndDraw();

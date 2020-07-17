@@ -1,23 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.Xna.Framework;
 using My2DGame.Core.Component.GameObject;
-using My2DGame.Core.GameObject;
 using My2DGame.Core.Property;
 
 namespace My2DGame.Component.Script {
 	public class ScriptComponent : BaseGameObjectComponent {
-		private readonly Action<IGameObject, GameTime> _action;
-		public ScriptComponent(Action<IGameObject, GameTime> action) {
-			_action = action;
+		public StringProperty ActionProperty { get; }
+		private IScriptAction _action;
+		public ScriptComponent(string actionTypeName): this(new StringProperty(actionTypeName)) {}
+		public ScriptComponent(StringProperty actionProperty) {
+			ActionProperty = actionProperty;
+		}
+		public override void Initialize() {
+			base.Initialize();
+			_action = (IScriptAction)GameObject.Scene.ServiceProvider.GetService(Type.GetType(ActionProperty.Value));
+			_action.GameObject = GameObject;
 		}
 		public override void Update(GameTime gameTime) {
 			base.Update(gameTime);
-			_action.Invoke(GameObject, gameTime);
+			_action.Update(gameTime);
+		}
+		public IScriptAction GetScriptAction() {
+			return _action;
 		}
 		public override IProperty[] GetProperties() {
-			return new IProperty[0];
+			return new IProperty[] {
+				ActionProperty
+			};
 		}
 	}
 }

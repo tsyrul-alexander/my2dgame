@@ -1,9 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using My2DGame.Content.Manager;
-using My2DGame.Content.Manager.Component;
-using My2DGame.Content.Manager.GameObject;
-using My2DGame.Content.Manager.Property;
-using My2DGame.Content.Manager.Scene;
+using My2DGame.Content.Manager.Json;
 using My2DGame.Core.Component.GameObject;
 using My2DGame.Core.GameObject;
 using My2DGame.Core.Property;

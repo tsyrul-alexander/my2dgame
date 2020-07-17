@@ -10,6 +10,9 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+	<AssemblyAttribute Include="My2DGame.Component.Script.ScriptActionAssemblyAttribute" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
   </ItemGroup>

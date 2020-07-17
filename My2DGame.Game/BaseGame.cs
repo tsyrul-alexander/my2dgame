@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using My2DGame.Component.Utilities;
 using My2DGame.Content.Manager;
 using My2DGame.Content.Utilities;
 using My2DGame.Core;
@@ -41,14 +42,14 @@ namespace My2DGame.Game {
 		public virtual IScene LoadScene(string directory, string sceneName) {
 			var fileManager = GetFileManager();
 			var content = fileManager.ReadAllText(fileManager.CombinePath(directory, sceneName));
-			var sceneContentManager = GetContentManager();
+			var sceneContentManager = GetContentManager<IScene>();
 			return sceneContentManager.Load(content);
 		}
 		public virtual IFileManager GetFileManager() {
 			return ServiceProvider.GetService<IFileManager>();
 		}
-		public virtual IContentManager<IScene> GetContentManager() {
-			return ServiceProvider.GetService<IContentManager<IScene>>();
+		public virtual IContentManager<T> GetContentManager<T>() {
+			return ServiceProvider.GetService<IContentManager<T>>();
 		}
 		public virtual IGameSynchronizer CreateGameSynchronizer() {
 			return ServiceProvider.GetService<IGameSynchronizer>();
@@ -60,6 +61,7 @@ namespace My2DGame.Game {
 			serviceCollection.UseGameComponent();
 			serviceCollection.UseGameContent();
 			serviceCollection.UseGameSynchronization();
+			serviceCollection.UseScriptActions();
 			var graphicsDeviceManager = (GraphicsDeviceManager) BaseServiceProvider.GetService(typeof(IGraphicsDeviceManager));
 			serviceCollection.AddSingleton<IGraphicsDeviceManager>(graphicsDeviceManager);
 			serviceCollection.AddSingleton<IGraphicsDeviceService>(graphicsDeviceManager);

@@ -6,8 +6,8 @@ using My2DGame.Core.Property;
 
 namespace My2DGame.Core.Component.GameObject {
 	public abstract class BaseGameObjectComponent : IGameObjectComponent {
-		private bool _enabled;
-		private bool _visible;
+		private bool _enabled = true;
+		private bool _visible = true;
 		private IGameObject _gameObject;
 		public event SilentPropertyChangedEventHandler PropertyChanged;
 		public IGameObject GameObject {

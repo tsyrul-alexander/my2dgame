@@ -11,9 +11,13 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Collider\ColliderComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Position\PositionComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Script\BaseScriptAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Script\IScriptAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Script\ScriptActionAssemblyAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Script\ScriptComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Texture\TextureComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\ComponentUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\ExtensionUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Position\" />
