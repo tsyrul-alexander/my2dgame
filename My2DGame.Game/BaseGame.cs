@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using My2DGame.Component.Utilities;
@@ -65,6 +66,7 @@ namespace My2DGame.Game {
 			var graphicsDeviceManager = (GraphicsDeviceManager) BaseServiceProvider.GetService(typeof(IGraphicsDeviceManager));
 			serviceCollection.AddSingleton<IGraphicsDeviceManager>(graphicsDeviceManager);
 			serviceCollection.AddSingleton<IGraphicsDeviceService>(graphicsDeviceManager);
+			serviceCollection.AddLogging(builder => builder.AddFile($"{Options.ContentFolderPath}\\Logs\\Log.txt"));
 		}
 		public virtual void Draw(GameTime gameTime) {
 			Scenes.ForEach(scene => scene.Draw(gameTime));

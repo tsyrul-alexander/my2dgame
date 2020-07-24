@@ -20,16 +20,20 @@ namespace My2DGame.Network.Server.Client {
 				Stream = _client.GetStream();
 				while (true) {
 					var message = Stream.GetMessageBytes();
-					message.GetRequestInfo(out var data, out var itemId, out var roomId);
-					if (itemId == Guid.Empty) {
+					if (message.Length == 0) {
+						break;
+					}
+					message.GetRequestInfo(out var data, out var itemId, out var roomId, out var queryType);
+					Console.WriteLine($"{itemId} {queryType}");
+					if (queryType == QueryType.GetAll) {
 						if (GameRoomManager.GetIfExistsRoom(roomId)) {
 							foreach (var roomData in GameRoomManager.GetData(roomId)) {
-								_server.Send(this, roomData.Value);
+								_server.Send(this, roomData);
 							}
 						}
 						continue;
 					}
-					GameRoomManager.Save(roomId, itemId, data);
+					GameRoomManager.Save(roomId, itemId, data, queryType);
 					_server.BroadcastMessage(data, Id);
 				}
 			} catch (Exception ex) {

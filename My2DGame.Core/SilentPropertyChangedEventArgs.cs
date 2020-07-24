@@ -3,8 +3,10 @@
 namespace My2DGame.Core {
 	public class SilentPropertyChangedEventArgs: PropertyChangedEventArgs {
 		public bool IsSilent { get; }
-		public SilentPropertyChangedEventArgs(string propertyName, bool isSilent = false) : base(propertyName) {
+		public object Value { get; set; }
+		public SilentPropertyChangedEventArgs(string propertyName,object value, bool isSilent = false) : base(propertyName) {
 			IsSilent = isSilent;
+			Value = value;
 		}
 	}
 }

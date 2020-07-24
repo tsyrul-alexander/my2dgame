@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using My2DGame.Content.Utilities;
 using My2DGame.Core.Component.GameObject;
 using My2DGame.Core.GameObject;
@@ -36,7 +34,10 @@ namespace My2DGame.Content.Manager.Json {
 			gameObject.JPropertyToEnabled(jObject);
 			gameObject.JPropertyToVisible(jObject);
 			var components = FromJArray(_componentContentManager, (JArray) jObject.GetValue(ComponentsPropertyName));
-			components.ForEach(component => gameObject.Components.Add(component));
+			components.ForEach(component => {
+				gameObject.Components.Add(component);
+				component.GameObject = gameObject;
+			});
 		}
 		protected virtual IGameObject CreateGameObject() {
 			return new GameObject();

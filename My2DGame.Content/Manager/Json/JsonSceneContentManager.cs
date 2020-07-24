@@ -27,6 +27,8 @@ namespace My2DGame.Content.Manager.Json
 		public override string Save(IScene item) {
 			var sceneObject = new JObject {
 				{ "name", item.Name },
+				item.EnabledToJProperty(),
+				item.VisibleToJProperty(),
 				{ GameObjectPropertyName, ToJArray(GameObjectContentManager, item.GameObjects) }
 			};
 			return sceneObject.ToString();

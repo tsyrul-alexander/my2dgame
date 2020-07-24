@@ -1,5 +1,6 @@
 ﻿using System;
-using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using My2DGame.Component.Animation;
 using My2DGame.Component.Collider;
 using My2DGame.Component.Position;
 using My2DGame.Component.Script;
@@ -9,7 +10,13 @@ using My2DGame.Core.GameObject;
 
 namespace My2DGame.Component.Utilities {
 	public static class ComponentUtilities {
-		public static TextureComponent AddTextureComponent(this IGameObject gameObject, string textureName) {
+		public static AnimationComponent AddAnimationComponent(this IGameObject gameObject,
+			IDictionary<int, string> animations = null, int startAnimation = -1) {
+			var component = new AnimationComponent(animations ?? new Dictionary<int, string>(), startAnimation);
+			gameObject.AddComponent(component);
+			return component;
+		}
+		public static TextureComponent AddTextureComponent(this IGameObject gameObject, string textureName = "") {
 			var component = new TextureComponent(textureName);
 			gameObject.AddComponent(component);
 			return component;
@@ -20,8 +27,8 @@ namespace My2DGame.Component.Utilities {
 			gameObject.AddComponent(component);
 			return component;
 		}
-		public static ScriptComponent AddScriptComponent(this IGameObject gameObject, Type scriptActionType) {
-			var component = new ScriptComponent(scriptActionType.FullName);
+		public static ScriptComponent AddScriptComponent(this IGameObject gameObject, Type scriptActionType = null) {
+			var component = new ScriptComponent(scriptActionType?.FullName);
 			gameObject.AddComponent(component);
 			return component;
 		}

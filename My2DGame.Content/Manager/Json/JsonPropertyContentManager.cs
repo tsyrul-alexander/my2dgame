@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
 using My2DGame.Core.Property;
 using Newtonsoft.Json.Linq;
 
@@ -11,20 +13,21 @@ namespace My2DGame.Content.Manager.Json {
 			return GetPropertyFromType(type, valueJToken);
 		}
 		public override string Save(IProperty item) {
+			var (typeName, propertyValue) = GetPropertyInfo(item);
 			var propertyJObj = new JObject {
-				new JProperty("type", GetPropertyType(item)),
-				new JProperty("value", item.GetValue())
+				new JProperty("type", typeName),
+				new JProperty("value", propertyValue)
 			};
 			return propertyJObj.ToString();
 		}
-		protected virtual string GetPropertyType(IProperty item) {
+		protected virtual (string typeName, JToken propertyValue) GetPropertyInfo(IProperty item) {
 			switch (item) {
-				case IProperty<string> _:
-					return nameof(String);
-				case IProperty<int> _:
-					return nameof(Int32);
-				case IProperty<double> _:
-					return nameof(Double);
+				case IProperty<string> stringProperty:
+					return (nameof(String), new JValue(stringProperty.Value));
+				case IProperty<int> intProperty:
+					return (nameof(Int32), new JValue(intProperty.Value));
+				case IProperty<double> doubleProperty:
+					return (nameof(Double), new JValue(doubleProperty.Value));
 				default:
 					throw new NotImplementedException(nameof(item));
 			}

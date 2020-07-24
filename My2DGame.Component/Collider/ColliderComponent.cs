@@ -40,11 +40,6 @@ namespace My2DGame.Component.Collider {
 				OnCollisionItemChanged();
 			}
 		}
-		public override IProperty[] GetProperties() {
-			return new IProperty[] {
-				XProperty, YProperty, WidthProperty, HeightProperty
-			};
-		}
 		public virtual void OnCollision(ICollisionItem collisionItem) {
 			Collision?.Invoke(this, collisionItem);
 		}

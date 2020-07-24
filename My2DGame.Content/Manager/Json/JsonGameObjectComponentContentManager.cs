@@ -1,4 +1,5 @@
 ﻿using System;
+using My2DGame.Component.Animation;
 using My2DGame.Component.Collider;
 using My2DGame.Component.Position;
 using My2DGame.Component.Script;
@@ -10,13 +11,14 @@ using Newtonsoft.Json.Linq;
 
 namespace My2DGame.Content.Manager.Json {
 	public class JsonGameObjectComponentContentManager : BaseContentManager<IGameObjectComponent> {
-		protected  virtual IContentManager<IProperty> PropertyContentManager { get; }
+		protected virtual IContentManager<IProperty> PropertyContentManager { get; }
 		private const string PropertyPropertyName = "property";
 		private const string TypePropertyName = "type";
 		private const string TextureComponentName = "texture";
 		private const string PositionComponentName = "position";
 		private const string ColliderComponentName = "collider";
 		private const string ScriptComponentName = "script";
+		private const string AnimationComponentName = "animation";
 
 		public JsonGameObjectComponentContentManager(IContentManager<IProperty> propertyContentManager) {
 			PropertyContentManager = propertyContentManager;
@@ -24,7 +26,7 @@ namespace My2DGame.Content.Manager.Json {
 		public override IGameObjectComponent Load(string content) {
 			var componentJObject = JObject.Parse(content);
 			var type = componentJObject.GetValue(TypePropertyName).Value<string>();
-			var property = (JObject)componentJObject.GetValue(PropertyPropertyName);
+			var property = (JObject) componentJObject.GetValue(PropertyPropertyName);
 			var component = CreateComponent(type, property);
 			component.JPropertyToEnabled(componentJObject);
 			component.JPropertyToVisible(componentJObject);
@@ -37,7 +39,7 @@ namespace My2DGame.Content.Manager.Json {
 				item.EnabledToJProperty(),
 				item.VisibleToJProperty(),
 				{TypePropertyName, componentType},
-				{PropertyPropertyName, propertyJObject }
+				{PropertyPropertyName, propertyJObject}
 			}.ToString();
 		}
 		protected virtual IGameObjectComponent CreateComponent(string componentType, JObject propertyJObject) {
@@ -50,9 +52,15 @@ namespace My2DGame.Content.Manager.Json {
 					return GetColliderComponent(propertyJObject);
 				case ScriptComponentName:
 					return GetScriptComponent(propertyJObject);
+				case AnimationComponentName:
+					return GetAnimationComponent(propertyJObject);
 				default:
 					throw new NotImplementedException(componentType);
 			}
+		}
+		private IGameObjectComponent GetAnimationComponent(JObject propertyJObject) {
+			return new AnimationComponent(JArrayToDictionary<int, string>((JArray)propertyJObject.GetValue("animations")),
+				(IntegerProperty)PropertyContentManager.Load(propertyJObject.GetValue("current_animation").ToString()));
 		}
 		private IGameObjectComponent GetScriptComponent(JObject propertyJObject) {
 			return new ScriptComponent(
@@ -66,7 +74,8 @@ namespace My2DGame.Content.Manager.Json {
 				(IntegerProperty) PropertyContentManager.Load(propertyJObject.GetValue("height").ToString()));
 		}
 		private IGameObjectComponent GetPositionComponent(JObject propertyJObject) {
-			return new PositionComponent((DoubleProperty) PropertyContentManager.Load(propertyJObject.GetValue("x").ToString()),
+			return new PositionComponent(
+				(DoubleProperty) PropertyContentManager.Load(propertyJObject.GetValue("x").ToString()),
 				(DoubleProperty) PropertyContentManager.Load(propertyJObject.GetValue("y").ToString()));
 		}
 		private IGameObjectComponent GetTextureComponent(JObject propertyJObject) {
@@ -83,29 +92,40 @@ namespace My2DGame.Content.Manager.Json {
 					return (ColliderComponentName, GetColliderPropertyJObject(colliderComponent));
 				case ScriptComponent scriptComponent:
 					return (ScriptComponentName, GetScriptPropertyJObject(scriptComponent));
+				case AnimationComponent animationComponent:
+					return (AnimationComponentName, GetAnimationPropertyJObject(animationComponent));
 				default:
 					throw new NotImplementedException(nameof(item));
 			}
 		}
-		private JObject GetScriptPropertyJObject(ScriptComponent scriptComponent) {
+		private JObject GetAnimationPropertyJObject(AnimationComponent animationComponent) {
 			return new JObject(
-				new JProperty("action", PropertyContentManager.Save(scriptComponent.ActionProperty)));
+				new JProperty("current_animation",
+					GetContentManagerItemJObject(PropertyContentManager, animationComponent.CurrentAnimation)),
+				new JProperty("animations",
+					DictionaryToJArray(animationComponent.Animations)));
+		}
+		private JObject GetScriptPropertyJObject(ScriptComponent scriptComponent) {
+			return new JObject(new JProperty("action",
+				GetContentManagerItemJObject(PropertyContentManager, scriptComponent.ActionProperty)));
 		}
 		private JObject GetColliderPropertyJObject(ColliderComponent colliderComponent) {
 			return new JObject(
-				new JProperty("x", PropertyContentManager.Save(colliderComponent.XProperty)),
-				new JProperty("y", PropertyContentManager.Save(colliderComponent.YProperty)),
-				new JProperty("height", PropertyContentManager.Save(colliderComponent.HeightProperty)),
-				new JProperty("width", PropertyContentManager.Save(colliderComponent.WidthProperty)));
+				new JProperty("x", GetContentManagerItemJObject(PropertyContentManager, colliderComponent.XProperty)),
+				new JProperty("y", GetContentManagerItemJObject(PropertyContentManager, colliderComponent.YProperty)),
+				new JProperty("height",
+					GetContentManagerItemJObject(PropertyContentManager, colliderComponent.HeightProperty)),
+				new JProperty("width",
+					GetContentManagerItemJObject(PropertyContentManager, colliderComponent.WidthProperty)));
 		}
 		private JObject GetPositionPropertyJObject(PositionComponent positionComponent) {
 			return new JObject(
-				new JProperty("x", PropertyContentManager.Save(positionComponent.X)),
-				new JProperty("y", PropertyContentManager.Save(positionComponent.Y)));
+				new JProperty("x", GetContentManagerItemJObject(PropertyContentManager, positionComponent.X)),
+				new JProperty("y", GetContentManagerItemJObject(PropertyContentManager, positionComponent.Y)));
 		}
 		private JObject GetTexturePropertyJObject(TextureComponent textureComponent) {
-			return new JObject(
-				new JProperty("texture_name", PropertyContentManager.Save(textureComponent.TextureName)));
+			return new JObject(new JProperty("texture_name",
+				GetContentManagerItemJObject(PropertyContentManager, textureComponent.TextureName)));
 		}
 	}
 }

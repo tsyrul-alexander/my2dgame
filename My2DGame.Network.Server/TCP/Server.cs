@@ -24,7 +24,6 @@ namespace My2DGame.Network.Server.TCP {
 			if (data.Length == 0) {
 				return;
 			}
-			Console.WriteLine("message " + senderId);
 			foreach (var client in Clients) {
 				if (client.Id != senderId) {
 					Send(client, data);
@@ -38,6 +37,7 @@ namespace My2DGame.Network.Server.TCP {
 			try {
 				_tcpListener = new TcpListener(address, port);
 				_tcpListener.Start();
+				Console.WriteLine("Start");
 				while (true) {
 					var tcpClient = _tcpListener.AcceptTcpClient();
 					var clientObject = new NetworkClient(tcpClient, this, Guid.NewGuid());

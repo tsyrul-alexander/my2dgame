@@ -7,7 +7,7 @@ namespace My2DGame.Network.Server {
 		public static void ConnectUser(Guid roomId, Guid userId) {
 			Rooms[roomId].ConnectUser(userId);
 		}
-		public static Dictionary<Guid, byte[]> GetData(Guid roomId) {
+		public static IEnumerable<byte[]> GetData(Guid roomId) {
 			return Rooms[roomId].GetData();
 		}
 		public static void DisconnectUser(Guid roomId, Guid userId) {
@@ -16,11 +16,11 @@ namespace My2DGame.Network.Server {
 				Rooms.Remove(roomId);
 			}
 		}
-		public static void Save(Guid roomId, Guid itemId, byte[] data) {
+		public static void Save(Guid roomId, Guid itemId, byte[] data, QueryType queryType) {
 			if (!Rooms.ContainsKey(roomId)) {
 				Rooms[roomId] = new GameRoom();
 			}
-			Rooms[roomId].Save(itemId, data);
+			Rooms[roomId].Save(itemId, data, queryType);
 		}
 		public static bool GetIfExistsRoom(Guid roomId) {
 			return Rooms.ContainsKey(roomId);

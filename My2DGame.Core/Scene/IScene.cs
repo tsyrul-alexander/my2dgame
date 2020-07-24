@@ -14,6 +14,7 @@ namespace My2DGame.Core.Scene {
 		ICollisionManager CollisionManager { get; }
 		ObservableCollection<IGameObject> GameObjects { get; }
 		IGameObject CreateGameObject();
+		IGameObject AddGameObject();
 		void Initialize();
 		void SetActive(bool isActive);
 	}

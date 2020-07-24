@@ -14,7 +14,7 @@ namespace My2DGame.Core.UI {
 					return;
 				}
 				_texture = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value, nameof(Texture), true);
 			}
 		}
 		public Vector2 Position {
@@ -24,7 +24,7 @@ namespace My2DGame.Core.UI {
 					return;
 				}
 				_position = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value, nameof(Position), true);
 			}
 		}
 		public Rectangle? SourceRectangle { get; set; }
@@ -34,8 +34,13 @@ namespace My2DGame.Core.UI {
 		public float Scale { get; set; } = 1;
 		public SpriteEffects Effects { get; set; } = SpriteEffects.None;
 		public float LayerDepth { get; set; }
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, bool isSilent = false) {
-			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, isSilent));
+		public void SetSilentValue(string propertyName, object value) {
+			if (propertyName == nameof(Position)) {
+				Position = (Vector2)value;
+			}
+		}
+		protected virtual void OnPropertyChanged(object value, [CallerMemberName] string propertyName = null, bool isSilent = false) {
+			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, value, isSilent));
 		}
 	}
 }

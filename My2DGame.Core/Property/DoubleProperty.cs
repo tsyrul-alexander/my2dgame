@@ -8,12 +8,12 @@ namespace My2DGame.Core.Property {
 			_propertyChangeStep = propertyChangeStep;
 			Value = value;
 		}
-		protected override void OnPropertyChanged(string propertyName = null, bool isSilent = false) {
+		protected override void OnPropertyChanged(object value, string propertyName = null, bool isSilent = false) {
 			if (propertyName == nameof(Value) && Math.Abs(Value - _lastChangedValue) < _propertyChangeStep) {
 				return;
 			}
 			_lastChangedValue = Value;
-			base.OnPropertyChanged(propertyName, isSilent);
+			base.OnPropertyChanged(Value, propertyName, isSilent);
 		}
 		public override object Clone() {
 			return new DoubleProperty(Value);

@@ -16,7 +16,7 @@ namespace My2DGame.Core.Component.GameObject {
 				if (Equals(value, _gameObject))
 					return;
 				_gameObject = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		public bool Enabled {
@@ -25,7 +25,7 @@ namespace My2DGame.Core.Component.GameObject {
 				if (value == _enabled)
 					return;
 				_enabled = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		public bool Visible {
@@ -34,18 +34,22 @@ namespace My2DGame.Core.Component.GameObject {
 				if (value == _visible)
 					return;
 				_visible = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		public virtual void Initialize() { }
-		public abstract IProperty[] GetProperties();
 		public virtual void Update(GameTime gameTime) { }
 		public virtual void Draw(GameTime gameTime) { }
 		public object Clone() {
 			throw new NotImplementedException();
 		}
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, bool isSilent = false) {
-			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, isSilent));
+		public virtual void SetSilentValue(string propertyName, object value) {
+			if (propertyName == nameof(Enabled)) {
+				_enabled = (bool)value;
+			}
+		}
+		protected virtual void OnPropertyChanged(object value, [CallerMemberName] string propertyName = null, bool isSilent = false) {
+			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, value, isSilent));
 		}
 	}
 }

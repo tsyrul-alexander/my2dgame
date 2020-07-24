@@ -11,7 +11,7 @@ namespace My2DGame.Core.Property {
 				if (GetIsEqualNewPropertyValue(value))
 					return;
 				_value = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		protected virtual bool GetIsEqualNewPropertyValue(T newValue) {
@@ -28,10 +28,15 @@ namespace My2DGame.Core.Property {
 		}
 		public void SetSilentValue(object value) {
 			_value = (T)value;
-			OnPropertyChanged(nameof(Value), true);
 		}
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, bool isSilent = false) {
-			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, isSilent));
+		public void SetSilentValue(string propertyName, object value) {
+			if (propertyName == nameof(Value)) {
+				Value = (T)value;
+			}
+			OnPropertyChanged(value, propertyName, true);
+		}
+		protected virtual void OnPropertyChanged(object value, [CallerMemberName] string propertyName = null, bool isSilent = false) {
+			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, value, isSilent));
 		}
 	}
 }

@@ -14,7 +14,7 @@ namespace My2DGame.Component.Script {
 		public override void Initialize() {
 			base.Initialize();
 			_action = (IScriptAction)GameObject.Scene.ServiceProvider.GetService(Type.GetType(ActionProperty.Value));
-			_action.GameObject = GameObject;
+			_action.Initialize(GameObject);
 		}
 		public override void Update(GameTime gameTime) {
 			base.Update(gameTime);
@@ -22,11 +22,6 @@ namespace My2DGame.Component.Script {
 		}
 		public IScriptAction GetScriptAction() {
 			return _action;
-		}
-		public override IProperty[] GetProperties() {
-			return new IProperty[] {
-				ActionProperty
-			};
 		}
 	}
 }

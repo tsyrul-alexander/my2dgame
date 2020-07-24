@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -22,7 +23,7 @@ namespace My2DGame.Desktop {
 			_game = new TestGame(_gameInput, Services, new GameOptions {
 				ContentFolderPath = Content.RootDirectory,
 				ServerIpAddress = "localhost",
-				ServerPort = 9976,
+				ServerPort = 9973,
 				NetworkRoomId = Guid.Parse("9a3a5d67-85ab-4509-bc29-72d025b435be")
 			});
 		}

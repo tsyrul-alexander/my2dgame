@@ -18,7 +18,7 @@ namespace My2DGame.Core.GameObject {
 				if (value == _enabled)
 					return;
 				_enabled = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		public bool Visible {
@@ -27,7 +27,7 @@ namespace My2DGame.Core.GameObject {
 				if (value == _visible)
 					return;
 				_visible = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		public virtual void Initialize() {

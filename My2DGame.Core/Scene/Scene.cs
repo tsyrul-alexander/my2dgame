@@ -23,7 +23,7 @@ namespace My2DGame.Core.Scene {
 				if (value == _enabled)
 					return;
 				_enabled = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		public bool Visible {
@@ -32,7 +32,7 @@ namespace My2DGame.Core.Scene {
 				if (value == _visible)
 					return;
 				_visible = value;
-				OnPropertyChanged();
+				OnPropertyChanged(value);
 			}
 		}
 		public ObservableCollection<IGameObject> GameObjects { get; } = new ObservableCollection<IGameObject>();
@@ -47,6 +47,11 @@ namespace My2DGame.Core.Scene {
 			return new GameObject.GameObject {
 				Scene = this
 			};
+		}
+		public IGameObject AddGameObject() {
+			var gameObject = CreateGameObject();
+			GameObjects.Add(gameObject);
+			return gameObject;
 		}
 		public void Initialize() {
 			GameObjects.ForEach(o => o.Initialize());
@@ -70,8 +75,13 @@ namespace My2DGame.Core.Scene {
 			SpriteBatch.EndDraw();
 		}
 		public event SilentPropertyChangedEventHandler PropertyChanged;
-		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null, bool isSilent = false) {
-			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, isSilent));
+		public void SetSilentValue(string propertyName, object value) {
+			if (propertyName == nameof(Enabled)) {
+				_enabled = (bool)value;
+			}
+		}
+		protected virtual void OnPropertyChanged(object value, [CallerMemberName] string propertyName = null, bool isSilent = false) {
+			PropertyChanged?.Invoke(this, new SilentPropertyChangedEventArgs(propertyName, value, isSilent));
 		}
 	}
 }

@@ -6,6 +6,5 @@ namespace My2DGame.Core.Component.GameObject {
 	public interface IGameObjectComponent : ISilentPropertyChanged, IUpdateable, IDrawable, ICloneable {
 		IGameObject GameObject { get; set; }
 		void Initialize();
-		IProperty[] GetProperties();
 	}
 }

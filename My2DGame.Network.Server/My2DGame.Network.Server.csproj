@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Client\NetworkClient.cs" />
     <Compile Include="GameRoom.cs" />
+    <Compile Include="GameRoomData.cs" />
     <Compile Include="GameRoomManager.cs" />
     <Compile Include="IServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

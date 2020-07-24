@@ -9,6 +9,7 @@
     <Import_RootNamespace>My2DGame.Component</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Animation\AnimationComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collider\ColliderComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Position\PositionComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Script\BaseScriptAction.cs" />

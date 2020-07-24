@@ -9,11 +9,14 @@ namespace My2DGame.Component.Texture {
 			TextureName = textureName;
 		}
 		public override void Initialize() {
-			GameObject.Texture = GameObject.Scene.AssetManager.LoadTexture(TextureName.Value);
 			base.Initialize();
+			GameObject.Texture = GameObject.Scene.AssetManager.LoadTexture(TextureName.Value);
 		}
-		public override IProperty[] GetProperties() {
-			return new IProperty[] { TextureName };
+		public override void SetSilentValue(string propertyName, object value) {
+			base.SetSilentValue(propertyName, value);
+			if (propertyName == nameof(TextureName)) {
+				TextureName.SetSilentValue((string)value);
+			}
 		}
 	}
 }

@@ -15,16 +15,31 @@ namespace My2DGame.Component.Position {
 		public override void Initialize() {
 			base.Initialize();
 			UpdateGameObjectPosition();
-			X.PropertyChanged += PositionOnPropertyChanged;
-			Y.PropertyChanged += PositionOnPropertyChanged;
+			X.PropertyChanged += PositionXOnPropertyChanged;
+			Y.PropertyChanged += PositionYOnPropertyChanged;
 		}
-		public override IProperty[] GetProperties() {
-			return new IProperty[] {X, Y};
+		private void PositionYOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
+			PositionOnPropertyChanged(sender, e);
+			OnPropertyChanged(Y.Value, nameof(Y));
+		}
+		private void PositionXOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
+			PositionOnPropertyChanged(sender, e);
+			OnPropertyChanged(X.Value, nameof(X));
 		}
 		private void PositionOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
 			if (e.PropertyName == nameof(IntegerProperty.Value)) {
 				UpdateGameObjectPosition();
 			}
+		}
+		public override void SetSilentValue(string propertyName, object value) {
+			base.SetSilentValue(propertyName, value);
+			if (propertyName == nameof(X)) {
+				X.SetSilentValue(value);
+			}
+			if (propertyName == nameof(Y)) {
+				Y.SetSilentValue(value);
+			}
+			OnPropertyChanged(value, propertyName, true);
 		}
 		protected virtual void UpdateGameObjectPosition() {
 			GameObject.Position = new Vector2((float) X.Value, (float) Y.Value);

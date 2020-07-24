@@ -13,13 +13,17 @@ namespace My2DGame.Network.Client.Tracker {
 		public virtual void Initialize() {
 			Value.PropertyChanged += ValueOnPropertyChanged;
 		}
-		public abstract void UpdateProperty(PropertyValue propertyValue);
-		protected abstract PropertyValue GetPropertyValue(string columnName);
+		public virtual void UpdateProperty(PropertyValue propertyValue) {
+			Value.SetSilentValue(propertyValue.Name, propertyValue.GetValue());
+		}
+		protected virtual PropertyValue GetPropertyValue(string columnName, object value) {
+			return new PropertyValue(columnName, value);
+		}
 		protected virtual void ValueOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
 			if (e.IsSilent) {
 				return;
 			}
-			var propertyValue = GetPropertyValue(e.PropertyName);
+			var propertyValue = GetPropertyValue(e.PropertyName, e.Value);
 			if (propertyValue == null) {
 				return;
 			}

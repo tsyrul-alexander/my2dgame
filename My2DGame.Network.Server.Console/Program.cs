@@ -15,13 +15,15 @@ namespace My2DGame.Network.Server.Console {
 			//if (configuration.TryGet("ip_address", out var address)) {
 			//	ipAddress = IPAddress.Parse(address);
 			//}
-			var port = 9976;
+			var port = 9973;
 			//if (configuration.TryGet("port", out var portStr)) {
 			//	port = int.Parse(portStr);
 			//}
 			var server = new TCP.Server();
 			try {
 				server.Listen(ipAddress, port);
+				System.Console.ReadLine();
+				server.Disconnect();
 			} catch (Exception e) {
 				server.Disconnect();
 				System.Console.WriteLine(e);

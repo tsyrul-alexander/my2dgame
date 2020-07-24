@@ -3,7 +3,7 @@ using My2DGame.Core.GameObject;
 
 namespace My2DGame.Component.Script {
 	public interface IScriptAction {
-		IGameObject GameObject { get; set; }
+		void Initialize(IGameObject gameObject);
 		void Update(GameTime gameTime);
 	}
 }
