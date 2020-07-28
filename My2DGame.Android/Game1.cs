@@ -20,8 +20,9 @@ namespace My2DGame.Android {
 			IsMouseVisible = true;
 			_game = new TestGame(_gameInput, Services, new GameOptions{
 				ContentFolderPath = Content.RootDirectory,
-				ServerIpAddress = "10.0.12.46",
-				ServerPort = 9976,
+				LogFolderPath = Environment.CurrentDirectory,
+				ServerIpAddress = "10.0.21.46",
+				ServerPort = 9973,
 				NetworkRoomId = Guid.Parse("9a3a5d67-85ab-4509-bc29-72d025b435be")
 			});
 		}

@@ -36,19 +36,19 @@ namespace My2DGame.Game.TestGame {
 				{0, @"Brick\grey_brick\animation_1\grey_brick_animation_1_frame_01"},
 				{1, @"Brick\grey_brick\animation_1\grey_brick_animation_1_frame_02"}
 			});
-			_gameSynchronizer = CreateGameSynchronizer();
+			_gameSynchronizer = GetGameSynchronizer();
 			_gameSynchronizer.SceneTrackedManager.Add(Guid.Parse("eaa77993-1b03-4060-82a2-f00111ae6efe"), gameScene);
-			_gameSynchronizer.Initialize();
+			//_gameSynchronizer.Initialize();
 			_gameSynchronizer.GameObjectTrackedManager.Add(Guid.NewGuid(), testGameObject);
 			_gameSynchronizer.GameObjectComponentTrackedManager.Add(Guid.NewGuid(), positionComponent);
 			_gameSynchronizer.GameObjectComponentTrackedManager.Add(Guid.NewGuid(), textureComponent);
 			gameScene.Initialize();
-			//var contentManager = GetContentManager<IScene>();
-			//var content = contentManager.Save(gameScene);
-			//File.WriteAllText(@"D:\Temp\Game\azaza.json", content);
-			//var scene = contentManager.Load(content);
-			//scene.Initialize();
-			Scenes.Add(gameScene);
+			var contentManager = GetContentManager<IScene>();
+			var content = contentManager.Save(gameScene);
+			File.WriteAllText(@"D:\Temp\Game\azaza.json", content);
+			var scene = contentManager.Load(File.ReadAllText(@"D:\Temp\Game\azaza.json"));
+			scene.Initialize();
+			Scenes.Add(scene);
 		}
 	}
 }

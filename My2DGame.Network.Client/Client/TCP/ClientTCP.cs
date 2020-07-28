@@ -22,8 +22,10 @@ namespace My2DGame.Network.Client.Client.TCP {
 			Task.Run(() => SubscribeMessage(_stream));
 		}
 		public void Send(INetworkObject obj, Guid roomId, QueryType queryType) {
-			var data = obj.ToBytes().GetRequestData(obj?.RequestItemId ?? Guid.Empty, roomId, queryType).ToArray();
-			_stream.Write(data, 0, data.Length);
+			var data = obj.ToBytes();
+			var requestData = data.GetRequestData(obj?.RequestItemId ?? Guid.Empty, roomId, queryType).ToArray();
+			_stream.Write(requestData, 0, requestData.Length);
+			Logger.Log(LogLevel.Information, $"send {obj?.RequestItemId ?? Guid.Empty}");
 		}
 		protected virtual void SubscribeMessage(NetworkStream stream) {
 			try {

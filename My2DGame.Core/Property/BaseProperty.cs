@@ -7,7 +7,7 @@ namespace My2DGame.Core.Property {
 		public event SilentPropertyChangedEventHandler PropertyChanged;
 		public T Value {
 			get => _value;
-			protected set {
+			set {
 				if (GetIsEqualNewPropertyValue(value))
 					return;
 				_value = value;
@@ -17,9 +17,6 @@ namespace My2DGame.Core.Property {
 		protected virtual bool GetIsEqualNewPropertyValue(T newValue) {
 			return Equals(Value, newValue);
 		}
-		public virtual void SetValue(T value) {
-			Value = value;
-		}
 		public virtual object Clone() {
 			throw new NotImplementedException();
 		}
@@ -28,6 +25,7 @@ namespace My2DGame.Core.Property {
 		}
 		public void SetSilentValue(object value) {
 			_value = (T)value;
+			OnPropertyChanged(value, nameof(Value), true);
 		}
 		public void SetSilentValue(string propertyName, object value) {
 			if (propertyName == nameof(Value)) {

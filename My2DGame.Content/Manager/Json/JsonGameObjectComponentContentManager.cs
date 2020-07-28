@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Xna.Framework;
 using My2DGame.Component.Animation;
 using My2DGame.Component.Collider;
 using My2DGame.Component.Position;
@@ -7,10 +8,12 @@ using My2DGame.Component.Texture;
 using My2DGame.Content.Utilities;
 using My2DGame.Core.Component.GameObject;
 using My2DGame.Core.Property;
+using My2DGame.Network.Client.Manager;
 using Newtonsoft.Json.Linq;
 
 namespace My2DGame.Content.Manager.Json {
 	public class JsonGameObjectComponentContentManager : BaseContentManager<IGameObjectComponent> {
+		public ITrackedManager<IGameObjectComponent> ComponentTrackedManager { get; }
 		protected virtual IContentManager<IProperty> PropertyContentManager { get; }
 		private const string PropertyPropertyName = "property";
 		private const string TypePropertyName = "type";
@@ -20,7 +23,8 @@ namespace My2DGame.Content.Manager.Json {
 		private const string ScriptComponentName = "script";
 		private const string AnimationComponentName = "animation";
 
-		public JsonGameObjectComponentContentManager(IContentManager<IProperty> propertyContentManager) {
+		public JsonGameObjectComponentContentManager(ITrackedManager<IGameObjectComponent> componentTrackedManager, IContentManager<IProperty> propertyContentManager) {
+			ComponentTrackedManager = componentTrackedManager;
 			PropertyContentManager = propertyContentManager;
 		}
 		public override IGameObjectComponent Load(string content) {
@@ -30,6 +34,7 @@ namespace My2DGame.Content.Manager.Json {
 			var component = CreateComponent(type, property);
 			component.JPropertyToEnabled(componentJObject);
 			component.JPropertyToVisible(componentJObject);
+			componentJObject.SetNetworkItem(ComponentTrackedManager, component);
 			return component;
 		}
 
@@ -39,7 +44,8 @@ namespace My2DGame.Content.Manager.Json {
 				item.EnabledToJProperty(),
 				item.VisibleToJProperty(),
 				{TypePropertyName, componentType},
-				{PropertyPropertyName, propertyJObject}
+				{PropertyPropertyName, propertyJObject},
+				ComponentTrackedManager.NetworkItemToJProperty(item)
 			}.ToString();
 		}
 		protected virtual IGameObjectComponent CreateComponent(string componentType, JObject propertyJObject) {

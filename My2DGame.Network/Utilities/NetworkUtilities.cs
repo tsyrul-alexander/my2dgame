@@ -9,14 +9,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace My2DGame.Network.Utilities {
 	public static class NetworkUtilities {
-		public const int QueryTypeStartIndex = 0;
-		public const int QueryTypeEndIndex = 1;
-		public const int RoomIdStartIndex = 1;
-		public const int RoomIdEndIndex = 17;
-		public const int UniqueIdStartIndex = 17;
-		public const int UniqueIdEndIndex = 33;
-		public const int LengthByteArraySize = 1;
-		public const int LengthDivisor = 8;
+		public const int LengthByteCount = 4;
+		public const int LengthStartIndex = 0;//0
+		public const int LengthByteEndIndex = 3;//3
+		public const int QueryTypeStartIndex = 0;//4
+		public const int QueryTypeEndIndex = QueryTypeStartIndex;//4
+		public const int RoomIdStartIndex = QueryTypeEndIndex + 1;//5
+		public const int RoomIdEndIndex = RoomIdStartIndex + 15;//20
+		public const int UniqueIdStartIndex = RoomIdEndIndex + 1;//21
+		public const int UniqueIdEndIndex = UniqueIdStartIndex + 15;//36
+		
 		public static byte[] ToBytes(this object obj, Func<BinaryFormatter, SurrogateSelector> selector = null) {
 			if (obj == null) {
 				return new byte[0];
@@ -35,11 +37,9 @@ namespace My2DGame.Network.Utilities {
 		}
 
 		public static IEnumerable<byte> GetRequestData(this byte[] data, Guid itemId, Guid roomId, QueryType queryType) {
-			var lenArray = new[] {
-				ConvertLengthToByte(data.Length),
-				(byte)queryType
-			};
-			var dataArr = lenArray.Concat(ConvertIdToBytes(roomId));
+			IEnumerable<byte> dataArr = ConvertLengthToBytes(data.Length + UniqueIdEndIndex + 1);
+			dataArr = dataArr.Concat(new []{ (byte)queryType });
+			dataArr = dataArr.Concat(ConvertIdToBytes(roomId));
 			dataArr = dataArr.Concat(ConvertIdToBytes(itemId));
 			return dataArr.Concat(data);
 		}
@@ -48,14 +48,14 @@ namespace My2DGame.Network.Utilities {
 			queryType = (QueryType)requestData[0];
 			roomId = ConvertBytesToId(requestData.Range(RoomIdStartIndex, RoomIdEndIndex).ToArray());
 			itemId = ConvertBytesToId(requestData.Range(UniqueIdStartIndex, UniqueIdEndIndex));
-			data = requestData.Skip(UniqueIdEndIndex).ToArray();
+			data = requestData.Skip(UniqueIdEndIndex + 1).ToArray();
 		}
 
 		public static T[] Range<T>(this T[] source, int start, int end) {
 			if (end < 0) {
 				end = source.Length + end;
 			}
-			var len = end - start;
+			var len = (end - start) + 1;
 			var res = new T[len];
 			for (var i = 0; i < len; i++) {
 				res[i] = source[i + start];
@@ -64,14 +64,17 @@ namespace My2DGame.Network.Utilities {
 		}
 
 		public static byte[] GetMessageBytes(this NetworkStream stream) {
-			var lenByte = (byte)stream.ReadByte();
-			var len = ConvertByteToLength(lenByte) + UniqueIdEndIndex;
+			var len = ConvertByteToLength((byte)stream.ReadByte(), (byte)stream.ReadByte(), (byte)stream.ReadByte(), (byte)stream.ReadByte());
 			var data = new byte[len];
 			using (var ms = new MemoryStream()) {
-				do {
+				if (stream.DataAvailable) {
 					var bytes = stream.Read(data, 0, data.Length);
 					ms.Write(data, 0, bytes);
-				} while (stream.DataAvailable);
+				}
+				//do {
+				//	var bytes = stream.Read(data, 0, data.Length);
+				//	ms.Write(data, 0, bytes);
+				//} while (stream.DataAvailable);
 				return ms.ToArray();
 			}
 		}
@@ -80,15 +83,11 @@ namespace My2DGame.Network.Utilities {
 			return id.ToByteArray();
 		}
 
-		private static byte ConvertLengthToByte(int len) {
-			var value = Math.Ceiling(len / (double)LengthDivisor);
-			if (value > byte.MaxValue) {
-				throw new ArgumentOutOfRangeException(nameof(len));
-			}
-			return (byte)value;
+		private static byte[] ConvertLengthToBytes(int len) {
+			return Int32Converter.ToArray(len);
 		}
-		private static int ConvertByteToLength(byte value) {
-			return value * LengthDivisor;
+		private static int ConvertByteToLength(byte value1, byte value2, byte value3, byte value4) {
+			return new Int32Converter(value1, value2, value3, value4);
 		}
 
 		public static Guid ConvertBytesToId(byte[] bytes) {
@@ -103,6 +102,18 @@ namespace My2DGame.Network.Utilities {
 			formatter.AssemblyFormat = FormatterAssemblyStyle.Full;
 			var obj = formatter.Deserialize(stream);
 			return obj;
+		}
+		public static object ToObject(this byte[] data,
+			Func<BinaryFormatter, SurrogateSelector> selector = null) {
+			BinaryFormatter formatter = new BinaryFormatter();
+			if (selector != null) {
+				formatter.SurrogateSelector = selector(formatter);
+			}
+			formatter.AssemblyFormat = FormatterAssemblyStyle.Full;
+			using (MemoryStream ms = new MemoryStream(data)) {
+				object obj = formatter.Deserialize(ms);
+				return obj;
+			}
 		}
 	}
 }

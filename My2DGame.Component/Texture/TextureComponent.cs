@@ -10,6 +10,9 @@ namespace My2DGame.Component.Texture {
 		}
 		public override void Initialize() {
 			base.Initialize();
+			LoadTexture();
+		}
+		public void LoadTexture() {
 			GameObject.Texture = GameObject.Scene.AssetManager.LoadTexture(TextureName.Value);
 		}
 		public override void SetSilentValue(string propertyName, object value) {

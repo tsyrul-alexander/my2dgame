@@ -20,11 +20,11 @@ namespace My2DGame.Component.Position {
 		}
 		private void PositionYOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
 			PositionOnPropertyChanged(sender, e);
-			OnPropertyChanged(Y.Value, nameof(Y));
+			OnPropertyChanged(Y.Value, nameof(Y), e.IsSilent);
 		}
 		private void PositionXOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
 			PositionOnPropertyChanged(sender, e);
-			OnPropertyChanged(X.Value, nameof(X));
+			OnPropertyChanged(X.Value, nameof(X), e.IsSilent);
 		}
 		private void PositionOnPropertyChanged(object sender, SilentPropertyChangedEventArgs e) {
 			if (e.PropertyName == nameof(IntegerProperty.Value)) {

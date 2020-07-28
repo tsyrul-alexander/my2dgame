@@ -3,18 +3,18 @@ using Microsoft.Extensions.DependencyInjection;
 using My2DGame.Content.Utilities;
 using My2DGame.Core.GameObject;
 using My2DGame.Core.Scene;
-using My2DGame.Network.Client.Synchronizer;
+using My2DGame.Network.Client.Manager;
 using Newtonsoft.Json.Linq;
 
 namespace My2DGame.Content.Manager.Json
 {
 	public class JsonSceneContentManager: BaseContentManager<IScene> {
-		protected virtual IGameSynchronizer GameSynchronizer { get; }
+		public ITrackedManager<IScene> SceneTrackedManager { get; }
 		protected virtual IContentManager<IGameObject> GameObjectContentManager { get; }
 		protected virtual IServiceProvider ServiceProvider { get; }
 		private const string GameObjectPropertyName = "game_objects";
-		public JsonSceneContentManager(IGameSynchronizer gameSynchronizer, IContentManager<IGameObject> gameObjectContentManager, IServiceProvider serviceProvider) {
-			GameSynchronizer = gameSynchronizer;
+		public JsonSceneContentManager(ITrackedManager<IScene> sceneTrackedManager, IContentManager<IGameObject> gameObjectContentManager, IServiceProvider serviceProvider) {
+			SceneTrackedManager = sceneTrackedManager;
 			GameObjectContentManager = gameObjectContentManager;
 			ServiceProvider = serviceProvider;
 		}
@@ -22,11 +22,13 @@ namespace My2DGame.Content.Manager.Json
 			var sceneObject = JObject.Parse(content);
 			var scene = CreateScene();
 			SetSceneParameters(scene, sceneObject);
+			sceneObject.SetNetworkItem(SceneTrackedManager, scene);
 			return scene;
 		}
 		public override string Save(IScene item) {
 			var sceneObject = new JObject {
 				{ "name", item.Name },
+				SceneTrackedManager.NetworkItemToJProperty(item),
 				item.EnabledToJProperty(),
 				item.VisibleToJProperty(),
 				{ GameObjectPropertyName, ToJArray(GameObjectContentManager, item.GameObjects) }

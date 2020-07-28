@@ -1,19 +1,29 @@
 ﻿using Microsoft.Xna.Framework;
 using My2DGame.Component.Position;
 using My2DGame.Component.Script;
-using My2DGame.Core.GameObject;
 
 namespace My2DGame.Game.TestGame.Script {
-	class PersonScriptAction : BaseScriptAction {
+	public class PersonScriptAction : BaseScriptAction {
 		private readonly GameInput _gameInput;
+		public double Speed { get; set; } = 0.5;
+
 		public PersonScriptAction(GameInput gameInput) {
 			_gameInput = gameInput;
 		}
 		public override void Update(GameTime gameTime) {
 			base.Update(gameTime);
+			var positionComponent = GameObject.Components.Get<PositionComponent>();
 			if (_gameInput.IsRight) {
-				var positionComponent = GameObject.Components.Get<PositionComponent>();
-				positionComponent.X.SetValue(positionComponent.X.Value + gameTime.ElapsedGameTime.TotalMilliseconds * 0.5);
+				positionComponent.X.Value += gameTime.ElapsedGameTime.TotalMilliseconds * Speed;
+			}
+			if (_gameInput.IsLeft) {
+				positionComponent.X.Value -= gameTime.ElapsedGameTime.TotalMilliseconds * Speed;
+			}
+			if (_gameInput.IsUp) {
+				positionComponent.Y.Value -= gameTime.ElapsedGameTime.TotalMilliseconds * Speed;
+			}
+			if (_gameInput.IsDown) {
+				positionComponent.Y.Value += gameTime.ElapsedGameTime.TotalMilliseconds * Speed;
 			}
 		}
 	}

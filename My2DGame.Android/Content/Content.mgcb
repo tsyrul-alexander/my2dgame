@@ -13,6 +13,198 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_00.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_00.png;Texture/BeachBall/beach_ball_00.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_00.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_00.png;Texture/BeachBall/beach_ball_00.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_01.png;Texture/BeachBall/beach_ball_01.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_01.png;Texture/BeachBall/beach_ball_01.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_02.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_02.png;Texture/BeachBall/beach_ball_02.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_02.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_02.png;Texture/BeachBall/beach_ball_02.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_03.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_03.png;Texture/BeachBall/beach_ball_03.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_03.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_03.png;Texture/BeachBall/beach_ball_03.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_04.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_04.png;Texture/BeachBall/beach_ball_04.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_04.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_04.png;Texture/BeachBall/beach_ball_04.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_05.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_05.png;Texture/BeachBall/beach_ball_05.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_05.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_05.png;Texture/BeachBall/beach_ball_05.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_06.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_06.png;Texture/BeachBall/beach_ball_06.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_06.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_06.png;Texture/BeachBall/beach_ball_06.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_07.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_07.png;Texture/BeachBall/beach_ball_07.png
+
+#begin ../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_07.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/BeachBall/beach_ball_07.png;Texture/BeachBall/beach_ball_07.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_01.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -24,6 +216,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_01.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_01.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_01.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_01.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_02.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_02.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_02.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_02.png
 /importer:TextureImporter
@@ -49,6 +265,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_03.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_03.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_03.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_03.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_03.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_04.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -60,6 +288,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_04.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_04.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_04.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_04.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_04.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_05.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_05.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_05.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_05.png
 /importer:TextureImporter
@@ -85,6 +337,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_06.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_06.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_06.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_06.png;Texture/Brick/grey_brick/animation_1/grey_brick_animation_1_frame_06.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_01.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -96,6 +360,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_01.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_01.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_01.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_01.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_02.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_02.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_02.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_02.png
 /importer:TextureImporter
@@ -121,6 +409,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_03.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_03.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_03.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_03.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_03.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_04.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -132,6 +432,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_04.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_04.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_04.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_04.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_04.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_05.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_05.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_05.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_05.png
 /importer:TextureImporter
@@ -157,6 +481,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_06.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_06.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_06.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_06.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_06.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_07.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -168,6 +504,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_07.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_07.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_07.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_07.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_07.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_08.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_08.png;Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_08.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/animation_2/grey_brick_animation_2_frame_08.png
 /importer:TextureImporter
@@ -193,6 +553,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_center_repeating.png;Texture/Brick/grey_brick/grey_brick_state_1_center_repeating.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_center_repeating.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_center_repeating.png;Texture/Brick/grey_brick/grey_brick_state_1_center_repeating.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_left_side.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -204,6 +576,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_left_side.png;Texture/Brick/grey_brick/grey_brick_state_1_left_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_left_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_left_side.png;Texture/Brick/grey_brick/grey_brick_state_1_left_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_right_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_right_side.png;Texture/Brick/grey_brick/grey_brick_state_1_right_side.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_1_right_side.png
 /importer:TextureImporter
@@ -229,6 +625,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_center_repeating.png;Texture/Brick/grey_brick/grey_brick_state_2_center_repeating.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_center_repeating.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_center_repeating.png;Texture/Brick/grey_brick/grey_brick_state_2_center_repeating.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_left_side.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -240,6 +648,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_left_side.png;Texture/Brick/grey_brick/grey_brick_state_2_left_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_left_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_left_side.png;Texture/Brick/grey_brick/grey_brick_state_2_left_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_right_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_right_side.png;Texture/Brick/grey_brick/grey_brick_state_2_right_side.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_2_right_side.png
 /importer:TextureImporter
@@ -265,6 +697,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_center_repeating.png;Texture/Brick/grey_brick/grey_brick_state_3_center_repeating.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_center_repeating.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_center_repeating.png;Texture/Brick/grey_brick/grey_brick_state_3_center_repeating.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_left_side.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -276,6 +720,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_left_side.png;Texture/Brick/grey_brick/grey_brick_state_3_left_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_left_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_left_side.png;Texture/Brick/grey_brick/grey_brick_state_3_left_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_right_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_right_side.png;Texture/Brick/grey_brick/grey_brick_state_3_right_side.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/grey_brick/grey_brick_state_3_right_side.png
 /importer:TextureImporter
@@ -301,6 +769,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_01.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_01.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_01.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_01.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_02.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -312,6 +792,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_02.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_02.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_02.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_02.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_02.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_03.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_03.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_03.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_03.png
 /importer:TextureImporter
@@ -337,6 +841,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_04.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_04.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_04.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_04.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_04.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_05.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -348,6 +864,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_05.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_05.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_05.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_05.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_05.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_06.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_06.png;Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_06.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animarion_1/red_brick_animation_1_frame_06.png
 /importer:TextureImporter
@@ -373,6 +913,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_01.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_01.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_01.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_01.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_02.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -384,6 +936,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_02.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_02.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_02.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_02.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_02.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_03.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_03.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_03.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_03.png
 /importer:TextureImporter
@@ -409,6 +985,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_04.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_04.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_04.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_04.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_04.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_05.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -420,6 +1008,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_05.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_05.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_05.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_05.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_05.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_06.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_06.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_06.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_06.png
 /importer:TextureImporter
@@ -445,6 +1057,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_07.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_07.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_07.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_07.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_07.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_08.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -456,6 +1080,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_08.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_08.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_08.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_08.png;Texture/Brick/red_brick/animation_2/red_brick_animation_2_frame_08.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_center_repeating.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_center_repeating.png;Texture/Brick/red_brick/red_brick_state_1_center_repeating.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_center_repeating.png
 /importer:TextureImporter
@@ -481,6 +1129,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_left_side.png;Texture/Brick/red_brick/red_brick_state_1_left_side.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_left_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_left_side.png;Texture/Brick/red_brick/red_brick_state_1_left_side.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_right_side.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -492,6 +1152,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_right_side.png;Texture/Brick/red_brick/red_brick_state_1_right_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_right_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_1_right_side.png;Texture/Brick/red_brick/red_brick_state_1_right_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_center_repeating.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_center_repeating.png;Texture/Brick/red_brick/red_brick_state_2_center_repeating.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_center_repeating.png
 /importer:TextureImporter
@@ -517,6 +1201,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_left_side.png;Texture/Brick/red_brick/red_brick_state_2_left_side.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_left_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_left_side.png;Texture/Brick/red_brick/red_brick_state_2_left_side.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_right_side.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -528,6 +1224,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_right_side.png;Texture/Brick/red_brick/red_brick_state_2_right_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_right_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_2_right_side.png;Texture/Brick/red_brick/red_brick_state_2_right_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_center_repeating.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_center_repeating.png;Texture/Brick/red_brick/red_brick_state_3_center_repeating.png
 
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_center_repeating.png
 /importer:TextureImporter
@@ -553,6 +1273,18 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_left_side.png;Texture/Brick/red_brick/red_brick_state_3_left_side.png
 
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_left_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_left_side.png;Texture/Brick/red_brick/red_brick_state_3_left_side.png
+
 #begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_right_side.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -564,6 +1296,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_right_side.png;Texture/Brick/red_brick/red_brick_state_3_right_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_right_side.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_right_side.png;Texture/Brick/red_brick/red_brick_state_3_right_side.png
+
+#begin ../../My2DGame.Game/Assets/Texture/wood_box.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/wood_box.png;Texture/wood_box.png
 
 #begin ../../My2DGame.Game/Assets/Texture/wood_box.png
 /importer:TextureImporter

@@ -1,4 +1,6 @@
-﻿using My2DGame.Core;
+﻿using System;
+using My2DGame.Core;
+using My2DGame.Network.Client.Manager;
 using Newtonsoft.Json.Linq;
 
 namespace My2DGame.Content.Utilities {
@@ -16,6 +18,19 @@ namespace My2DGame.Content.Utilities {
 		}
 		public static JProperty VisibleToJProperty(this IDrawable drawable) {
 			return new JProperty("visible", drawable.Visible);
+		}
+		public static void SetNetworkItem<T>(this JObject jObject, ITrackedManager<T> trackedManager, T item) where T : ISilentPropertyChanged {
+			var networkId = jObject.Value<string>("network");
+			if (networkId == null) {
+				return;
+			}
+			trackedManager.Add(Guid.Parse(networkId), item);
+		}
+		public static JProperty NetworkItemToJProperty<T>(this ITrackedManager<T> trackedManager, T item) where T : ISilentPropertyChanged {
+			if (trackedManager.TryGetItem(item, out var networkId)) {
+				return new JProperty("network", networkId);
+			}
+			return new JProperty("network", null);
 		}
 	}
 }

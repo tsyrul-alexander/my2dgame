@@ -24,7 +24,7 @@ namespace My2DGame.Network.Server.Client {
 						break;
 					}
 					message.GetRequestInfo(out var data, out var itemId, out var roomId, out var queryType);
-					Console.WriteLine($"{itemId} {queryType}");
+					Console.WriteLine($"{itemId} {queryType} {data.Length}");
 					if (queryType == QueryType.GetAll) {
 						if (GameRoomManager.GetIfExistsRoom(roomId)) {
 							foreach (var roomData in GameRoomManager.GetData(roomId)) {

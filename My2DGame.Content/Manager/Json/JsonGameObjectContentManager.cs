@@ -3,19 +3,24 @@ using My2DGame.Content.Utilities;
 using My2DGame.Core.Component.GameObject;
 using My2DGame.Core.GameObject;
 using My2DGame.Core.Utilities;
+using My2DGame.Network.Client.Manager;
 using Newtonsoft.Json.Linq;
 
 namespace My2DGame.Content.Manager.Json {
 	public class JsonGameObjectContentManager : BaseContentManager<IGameObject> {
+		public ITrackedManager<IGameObject> GameObjectTrackedManager { get; }
 		private readonly IContentManager<IGameObjectComponent> _componentContentManager;
 		private const string ComponentsPropertyName = "components";
-		public JsonGameObjectContentManager(IContentManager<IGameObjectComponent> componentContentManager) {
+		public JsonGameObjectContentManager(ITrackedManager<IGameObject> gameObjectTrackedManager,
+				IContentManager<IGameObjectComponent> componentContentManager) {
+			GameObjectTrackedManager = gameObjectTrackedManager;
 			_componentContentManager = componentContentManager;
 		}
 		public override IGameObject Load(string content) {
 			var gameObjectJObject = JObject.Parse(content);
 			var gameObject = CreateGameObject();
 			SetProperties(gameObjectJObject, gameObject);
+			gameObjectJObject.SetNetworkItem(GameObjectTrackedManager, gameObject);
 			return gameObject;
 		}
 		public override string Save(IGameObject item) {
@@ -23,6 +28,7 @@ namespace My2DGame.Content.Manager.Json {
 				item.VisibleToJProperty(),
 				item.EnabledToJProperty(),
 				{"PositionX", item.Position.X},
+				GameObjectTrackedManager.NetworkItemToJProperty(item),
 				{"PositionY", item.Position.Y},
 				{ComponentsPropertyName, ToJArray(_componentContentManager, item.Components)}
 			}.ToString();

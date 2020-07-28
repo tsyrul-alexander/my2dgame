@@ -52,7 +52,7 @@ namespace My2DGame.Game {
 		public virtual IContentManager<T> GetContentManager<T>() {
 			return ServiceProvider.GetService<IContentManager<T>>();
 		}
-		public virtual IGameSynchronizer CreateGameSynchronizer() {
+		public virtual IGameSynchronizer GetGameSynchronizer() {
 			return ServiceProvider.GetService<IGameSynchronizer>();
 		}
 		public virtual void ConfigureGameServices(IServiceCollection serviceCollection) {
@@ -66,7 +66,8 @@ namespace My2DGame.Game {
 			var graphicsDeviceManager = (GraphicsDeviceManager) BaseServiceProvider.GetService(typeof(IGraphicsDeviceManager));
 			serviceCollection.AddSingleton<IGraphicsDeviceManager>(graphicsDeviceManager);
 			serviceCollection.AddSingleton<IGraphicsDeviceService>(graphicsDeviceManager);
-			serviceCollection.AddLogging(builder => builder.AddFile($"{Options.ContentFolderPath}\\Logs\\Log.txt"));
+			serviceCollection.AddLogging(builder => builder.AddFile($"{Options.LogFolderPath}\\Log.txt"));
+			//serviceCollection.AddLogging(builder => builder.AddDebug());
 		}
 		public virtual void Draw(GameTime gameTime) {
 			Scenes.ForEach(scene => scene.Draw(gameTime));

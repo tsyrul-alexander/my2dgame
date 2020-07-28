@@ -22,6 +22,7 @@ namespace My2DGame.Desktop {
 			IsMouseVisible = true;
 			_game = new TestGame(_gameInput, Services, new GameOptions {
 				ContentFolderPath = Content.RootDirectory,
+				LogFolderPath = Environment.CurrentDirectory,
 				ServerIpAddress = "localhost",
 				ServerPort = 9973,
 				NetworkRoomId = Guid.Parse("9a3a5d67-85ab-4509-bc29-72d025b435be")
@@ -38,6 +39,9 @@ namespace My2DGame.Desktop {
 				Keyboard.GetState().IsKeyDown(Keys.Escape))
 				Exit();
 			_gameInput.IsRight = Keyboard.GetState().IsKeyDown(Keys.D);
+			_gameInput.IsLeft = Keyboard.GetState().IsKeyDown(Keys.A);
+			_gameInput.IsUp = Keyboard.GetState().IsKeyDown(Keys.W);
+			_gameInput.IsDown = Keyboard.GetState().IsKeyDown(Keys.S);
 			_game.Update(gameTime);
 			base.Update(gameTime);
 		}
