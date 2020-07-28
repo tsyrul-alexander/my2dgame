@@ -25,6 +25,12 @@ namespace My2DGame.Content.Manager {
 			}
 			return null;
 		}
+		protected virtual JArray ArrayToJArray<TValue>(IEnumerable<TValue> array) {
+			return new JArray(array);
+		}
+		protected virtual IEnumerable<TValue> JArrayToArray<TValue>(JArray jArray) {
+			return jArray.Values<TValue>();
+		}
 		protected virtual JArray DictionaryToJArray<TKey, TValue>(IDictionary<TKey, TValue> dictionary) {
 			return new JArray(dictionary.Select(pair => new JObject {
 				new JProperty("key", pair.Key),

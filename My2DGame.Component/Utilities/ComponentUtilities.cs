@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using My2DGame.Component.Animation;
 using My2DGame.Component.Collider;
 using My2DGame.Component.Position;
@@ -27,8 +28,8 @@ namespace My2DGame.Component.Utilities {
 			gameObject.AddComponent(component);
 			return component;
 		}
-		public static ScriptComponent AddScriptComponent(this IGameObject gameObject, Type scriptActionType = null) {
-			var component = new ScriptComponent(scriptActionType?.FullName);
+		public static ScriptComponent AddScriptComponent(this IGameObject gameObject, params Type[] scriptActionTypes) {
+			var component = new ScriptComponent(scriptActionTypes.Select(type => type?.FullName).ToArray());
 			gameObject.AddComponent(component);
 			return component;
 		}

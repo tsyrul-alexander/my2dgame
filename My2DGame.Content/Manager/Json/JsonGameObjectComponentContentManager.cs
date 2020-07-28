@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using My2DGame.Component.Animation;
 using My2DGame.Component.Collider;
@@ -69,8 +70,7 @@ namespace My2DGame.Content.Manager.Json {
 				(IntegerProperty)PropertyContentManager.Load(propertyJObject.GetValue("current_animation").ToString()));
 		}
 		private IGameObjectComponent GetScriptComponent(JObject propertyJObject) {
-			return new ScriptComponent(
-				(StringProperty) PropertyContentManager.Load(propertyJObject.GetValue("action").ToString()));
+			return new ScriptComponent(JArrayToArray<string>((JArray)propertyJObject.GetValue("actions")).ToArray());
 		}
 		private IGameObjectComponent GetColliderComponent(JObject propertyJObject) {
 			return new ColliderComponent(
@@ -112,8 +112,7 @@ namespace My2DGame.Content.Manager.Json {
 					DictionaryToJArray(animationComponent.Animations)));
 		}
 		private JObject GetScriptPropertyJObject(ScriptComponent scriptComponent) {
-			return new JObject(new JProperty("action",
-				GetContentManagerItemJObject(PropertyContentManager, scriptComponent.ActionProperty)));
+			return new JObject(new JProperty("actions", ArrayToJArray(scriptComponent.Actions)));
 		}
 		private JObject GetColliderPropertyJObject(ColliderComponent colliderComponent) {
 			return new JObject(

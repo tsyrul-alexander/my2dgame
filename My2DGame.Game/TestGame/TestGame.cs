@@ -31,11 +31,11 @@ namespace My2DGame.Game.TestGame {
 			var textureComponent = testGameObject.AddTextureComponent(@"BeachBall\beach_ball_00");
 			var positionComponent = testGameObject.AddPositionComponent();
 			testGameObject.AddColliderComponent(0, 0, 323, 316);
-			testGameObject.AddScriptComponent(typeof(PersonScriptAction));
 			testGameObject.AddAnimationComponent(new Dictionary<int, string> {
 				{0, @"Brick\grey_brick\animation_1\grey_brick_animation_1_frame_01"},
 				{1, @"Brick\grey_brick\animation_1\grey_brick_animation_1_frame_02"}
 			});
+			testGameObject.AddScriptComponent(typeof(PersonScriptAction), typeof(PersonAnimationScriptAction));
 			_gameSynchronizer = GetGameSynchronizer();
 			_gameSynchronizer.SceneTrackedManager.Add(Guid.Parse("eaa77993-1b03-4060-82a2-f00111ae6efe"), gameScene);
 			//_gameSynchronizer.Initialize();

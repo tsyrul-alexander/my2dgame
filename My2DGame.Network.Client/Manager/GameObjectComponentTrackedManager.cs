@@ -77,7 +77,7 @@ namespace My2DGame.Network.Client.Manager {
 					});
 				case ScriptComponent scriptComponent:
 					return (nameof(ScriptComponent), new [] {
-						new PropertyValue(nameof(scriptComponent.ActionProperty), scriptComponent.ActionProperty.Value) 
+						new PropertyValue(nameof(scriptComponent.Actions), scriptComponent.Actions)
 					});
 				default:
 					throw new NotImplementedException(nameof(gameObjectComponent));
