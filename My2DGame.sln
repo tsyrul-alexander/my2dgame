@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "My2DGame.Network", "My2DGam
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.Content", "My2DGame.Content\My2DGame.Content.shproj", "{AFDB573B-1512-4BAE-8609-BCE08F54618D}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "My2DGame.UI", "My2DGame.UI\My2DGame.UI.shproj", "{84551E79-7405-492F-AA0D-EA5705860398}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		My2DGame.Component\My2DGame.Component.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
@@ -26,13 +28,16 @@ Global
 		My2DGame.Core\My2DGame.Core.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
 		My2DGame.Game\My2DGame.Game.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
 		My2DGame.Network.Client\My2DGame.Network.Client.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
+		My2DGame.UI\My2DGame.UI.projitems*{26e036e9-4f7e-48aa-a1f6-9584d01813e8}*SharedItemsImports = 5
 		My2DGame.Component\My2DGame.Component.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Content\My2DGame.Content.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Core\My2DGame.Core.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Game\My2DGame.Game.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Network.Client\My2DGame.Network.Client.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
+		My2DGame.UI\My2DGame.UI.projitems*{410c0262-131c-4d0e-910d-d01b4f7143e0}*SharedItemsImports = 4
 		My2DGame.Component\My2DGame.Component.projitems*{50b5fdf7-6d7b-4a0c-b3f8-1924d22e41db}*SharedItemsImports = 13
 		My2DGame.Game\My2DGame.Game.projitems*{66fe7c84-0fc3-41f9-82c8-c9ca80cbf191}*SharedItemsImports = 13
+		My2DGame.UI\My2DGame.UI.projitems*{84551e79-7405-492f-aa0d-ea5705860398}*SharedItemsImports = 13
 		My2DGame.Network.Client\My2DGame.Network.Client.projitems*{af85ba45-ce9c-42c1-ab0c-9c350a7c2edc}*SharedItemsImports = 13
 		My2DGame.Content\My2DGame.Content.projitems*{afdb573b-1512-4bae-8609-bce08f54618d}*SharedItemsImports = 13
 		My2DGame.Core\My2DGame.Core.projitems*{efbd20c2-1774-4ef1-8838-c9c77780e0ae}*SharedItemsImports = 13

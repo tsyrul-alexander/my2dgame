@@ -18,6 +18,8 @@ namespace My2DGame.Android {
 			_graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
 			IsMouseVisible = true;
+			IsFixedTimeStep = true;
+			TargetElapsedTime = TimeSpan.FromSeconds(1d / 30d);
 			_game = new TestGame(_gameInput, Services, new GameOptions{
 				ContentFolderPath = Content.RootDirectory,
 				LogFolderPath = Environment.CurrentDirectory,

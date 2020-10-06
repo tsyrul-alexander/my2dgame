@@ -31,7 +31,7 @@ namespace My2DGame.Core.UI {
 		public Color Color { get; set; } = Color.White;
 		public float Rotation { get; set; }
 		public Vector2 Origin { get; set; }
-		public float Scale { get; set; } = 1;
+		public Vector2 Scale { get; set; }
 		public SpriteEffects Effects { get; set; } = SpriteEffects.None;
 		public float LayerDepth { get; set; }
 		public void SetSilentValue(string propertyName, object value) {

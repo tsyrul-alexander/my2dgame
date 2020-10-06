@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)GameObject\GameObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GameObject\IGameObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IDrawable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\IMouseInput.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ISilentPropertyChanged.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IUpdateable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Manager\AssetManager.cs" />

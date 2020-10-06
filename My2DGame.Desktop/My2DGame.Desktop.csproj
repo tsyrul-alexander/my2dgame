@@ -43,4 +43,5 @@
   <Import Project="..\My2DGame.Game\My2DGame.Game.projitems" Label="Shared" />
   <Import Project="..\My2DGame.Network.Client\My2DGame.Network.Client.projitems" Label="Shared" />
   <Import Project="..\My2DGame.Content\My2DGame.Content.projitems" Label="Shared" />
+  <Import Project="..\My2DGame.UI\My2DGame.UI.projitems" Label="Shared" />
 </Project>

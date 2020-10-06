@@ -24,7 +24,8 @@ namespace My2DGame.Content.Manager.Json {
 		private const string ScriptComponentName = "script";
 		private const string AnimationComponentName = "animation";
 
-		public JsonGameObjectComponentContentManager(ITrackedManager<IGameObjectComponent> componentTrackedManager, IContentManager<IProperty> propertyContentManager) {
+		public JsonGameObjectComponentContentManager(ITrackedManager<IGameObjectComponent> componentTrackedManager,
+				IContentManager<IProperty> propertyContentManager) {
 			ComponentTrackedManager = componentTrackedManager;
 			PropertyContentManager = propertyContentManager;
 		}
@@ -86,7 +87,9 @@ namespace My2DGame.Content.Manager.Json {
 		}
 		private IGameObjectComponent GetTextureComponent(JObject propertyJObject) {
 			return new TextureComponent(
-				(StringProperty) PropertyContentManager.Load(propertyJObject.GetValue("texture_name").ToString()));
+				(StringProperty) PropertyContentManager.Load(propertyJObject.GetValue("texture_name").ToString()),
+				(IntegerProperty)PropertyContentManager.Load(propertyJObject.GetValue("width").ToString()),
+				(IntegerProperty)PropertyContentManager.Load(propertyJObject.GetValue("height").ToString()));
 		}
 		protected virtual (string componentType, JObject propertyJObject) GetComponentType(IGameObjectComponent item) {
 			switch (item) {
@@ -130,7 +133,11 @@ namespace My2DGame.Content.Manager.Json {
 		}
 		private JObject GetTexturePropertyJObject(TextureComponent textureComponent) {
 			return new JObject(new JProperty("texture_name",
-				GetContentManagerItemJObject(PropertyContentManager, textureComponent.TextureName)));
+				GetContentManagerItemJObject(PropertyContentManager, textureComponent.TextureName)),
+				new JProperty("width",
+					GetContentManagerItemJObject(PropertyContentManager, textureComponent.Wight)),
+				new JProperty("height",
+					GetContentManagerItemJObject(PropertyContentManager, textureComponent.Height)));
 		}
 	}
 }

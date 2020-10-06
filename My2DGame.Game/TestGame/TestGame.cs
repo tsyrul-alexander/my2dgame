@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.Extensions.DependencyInjection;
-using My2DGame.Component.Animation;
-using My2DGame.Component.Texture;
 using My2DGame.Component.Utilities;
 using My2DGame.Core;
-using My2DGame.Core.Property;
 using My2DGame.Core.Scene;
 using My2DGame.Core.UI;
 using My2DGame.Game.TestGame.Script;

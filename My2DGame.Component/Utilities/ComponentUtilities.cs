@@ -17,13 +17,13 @@ namespace My2DGame.Component.Utilities {
 			gameObject.AddComponent(component);
 			return component;
 		}
-		public static TextureComponent AddTextureComponent(this IGameObject gameObject, string textureName = "") {
-			var component = new TextureComponent(textureName);
+		public static TextureComponent AddTextureComponent(this IGameObject gameObject, string textureName = "", int width = -1, int height = -1) {
+			var component = new TextureComponent(textureName, width, height);
 			gameObject.AddComponent(component);
 			return component;
 		}
-		public static PositionComponent AddPositionComponent(this IGameObject gameObject, int x = default,
-			int y = default) {
+		public static PositionComponent AddPositionComponent(this IGameObject gameObject, double x = default,
+			double y = default) {
 			var component = new PositionComponent(x, y);
 			gameObject.AddComponent(component);
 			return component;

@@ -661,6 +661,30 @@
 /processorParam:TextureFormat=Color
 /build:../../My2DGame.Game/Assets/Texture/Brick/red_brick/red_brick_state_3_right_side.png;Texture/Brick/red_brick/red_brick_state_3_right_side.png
 
+#begin ../../My2DGame.Game/Assets/Texture/control/button/button_next.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/control/button/button_next.png;Texture/control/button/button_next.png
+
+#begin ../../My2DGame.Game/Assets/Texture/Control/button/button_next.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../My2DGame.Game/Assets/Texture/Control/button/button_next.png;Texture/Control/button/button_next.png
+
 #begin ../../My2DGame.Game/Assets/Texture/wood_box.png
 /importer:TextureImporter
 /processor:TextureProcessor

@@ -15,6 +15,7 @@ namespace My2DGame.Core.Scene {
 		ObservableCollection<IGameObject> GameObjects { get; }
 		IGameObject CreateGameObject();
 		IGameObject AddGameObject();
+		IGameObject AddGameObject(IGameObject gameObject);
 		void Initialize();
 		void SetActive(bool isActive);
 	}

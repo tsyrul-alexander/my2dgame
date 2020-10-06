@@ -9,7 +9,7 @@ namespace My2DGame.Core.UI {
 		Color Color { get; set; }
 		float Rotation { get; set; }
 		Vector2 Origin { get; set; }
-		float Scale { get; set; }
+		Vector2 Scale { get; set; }
 		SpriteEffects Effects { get; set; }
 		float LayerDepth { get; set; }
 	}

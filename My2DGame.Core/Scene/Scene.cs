@@ -50,7 +50,11 @@ namespace My2DGame.Core.Scene {
 		}
 		public IGameObject AddGameObject() {
 			var gameObject = CreateGameObject();
+			return AddGameObject(gameObject);
+		}
+		public IGameObject AddGameObject(IGameObject gameObject) {
 			GameObjects.Add(gameObject);
+			gameObject.Scene = this;
 			return gameObject;
 		}
 		public void Initialize() {

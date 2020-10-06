@@ -1,4 +1,5 @@
-﻿using My2DGame.Component.Animation;
+﻿using Microsoft.Xna.Framework;
+using My2DGame.Component.Animation;
 using My2DGame.Component.Script;
 using My2DGame.Core.GameObject;
 
@@ -12,6 +13,11 @@ namespace My2DGame.Game.TestGame.Script {
 			var scriptComponent = gameObject.Components.Get<ScriptComponent>();
 			PersonScriptAction = scriptComponent.GetScriptAction<PersonScriptAction>();
 		}
-
+		public override void Update(GameTime gameTime) {
+			base.Update(gameTime);
+			//if (PersonScriptAction.IsRight) {
+			//	AnimationComponent.CurrentAnimation = 
+			//}
+		}
 	}
 }
